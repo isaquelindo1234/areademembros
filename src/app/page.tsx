@@ -6,7 +6,7 @@ import { Testimonials }from '@/components/landing/Testimonials';
 import { GuaranteeSection } from '@/components/landing/GuaranteeSection';
 import { FaqSection } from '@/components/landing/FaqSection';
 import { Footer } from '@/components/landing/Footer';
-import { Separator } from '@/components/ui/separator';
+import { PricingSection } from '@/components/landing/PricingSection';
 
 export default function Home() {
   return (
@@ -15,8 +15,9 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <InfoSection />
-        <HowItWorks />
         <Testimonials />
+        <HowItWorks />
+        <PricingSection />
         <GuaranteeSection />
         <FaqSection />
       </main>

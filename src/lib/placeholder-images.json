@@ -2,45 +2,45 @@
   "placeholderImages": [
     {
       "id": "sound-wave-hero",
-      "description": "Abstract sound wave illustration for the hero section",
-      "imageUrl": "https://picsum.photos/seed/101/1200/400",
-      "imageHint": "sound wave"
+      "description": "Uma mulher com fones de ouvido e uma onda sonora rosa emanando.",
+      "imageUrl": "https://picsum.photos/seed/soundwave/500/300",
+      "imageHint": "woman headphones soundwave"
     },
     {
       "id": "contemplative-woman",
-      "description": "A woman looking thoughtful or sad, representing a user's pain point.",
-      "imageUrl": "https://picsum.photos/seed/102/500/500",
-      "imageHint": "sad woman"
+      "description": "Uma mulher olhando pensativa ou triste, representando o ponto de dor de um usuário.",
+      "imageUrl": "https://picsum.photos/seed/102/400/500",
+      "imageHint": "sad woman portrait"
     },
     {
       "id": "happy-couple",
-      "description": "An image of a happy couple, representing the desired outcome.",
-      "imageUrl": "https://picsum.photos/seed/103/800/600",
-      "imageHint": "happy couple"
+      "description": "Uma imagem de um casal feliz, representando o resultado desejado.",
+      "imageUrl": "https://picsum.photos/seed/103/320/570",
+      "imageHint": "happy couple selfie"
     },
     {
       "id": "guarantee-seal",
-      "description": "A seal or badge for the 30-day guarantee section.",
-      "imageUrl": "https://picsum.photos/seed/104/500/500",
+      "description": "Um selo ou emblema para a seção de garantia de 30 dias.",
+      "imageUrl": "https://picsum.photos/seed/104/400/400",
       "imageHint": "guarantee seal"
     },
     {
       "id": "testimonial-1",
-      "description": "Placeholder for a testimonial screenshot.",
-      "imageUrl": "https://picsum.photos/seed/105/400/200",
+      "description": "Espaço reservado para uma captura de tela de depoimento.",
+      "imageUrl": "https://picsum.photos/seed/105/300/400",
       "imageHint": "chat message"
     },
     {
       "id": "testimonial-2",
-      "description": "Placeholder for a second testimonial screenshot.",
-      "imageUrl": "https://picsum.photos/seed/106/400/250",
+      "description": "Espaço reservado para uma segunda captura de tela de depoimento.",
+      "imageUrl": "https://picsum.photos/seed/106/300/400",
       "imageHint": "chat message"
     },
     {
-      "id": "testimonial-3",
-      "description": "Placeholder for a third testimonial screenshot.",
-      "imageUrl": "https://picsum.photos/seed/107/400/220",
-      "imageHint": "chat message"
+      "id": "pricing-image",
+      "description": "Imagem de um smartphone e fones de ouvido para a seção de preços.",
+      "imageUrl": "https://picsum.photos/seed/pricing/400/500",
+      "imageHint": "phone earbuds"
     }
   ]
 }

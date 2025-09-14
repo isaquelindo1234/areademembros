@@ -7,20 +7,20 @@ import {
   
 const faqs = [
     {
-        question: "How will I access the product?",
-        answer: "As soon as the melody is generated, it will appear on this page for you to listen to immediately. You can also download it to listen anytime."
+        question: "Como vou acessar o produto?",
+        answer: "Assim que a melodia for gerada, ela aparecerá nesta página para você ouvir imediatamente. Você também pode baixá-la para ouvir a qualquer momento."
     },
     {
-        question: "Is it really safe?",
-        answer: "Yes, the process is completely safe. The melody uses specific audio frequencies designed to influence your state of mind positively."
+        question: "É realmente seguro?",
+        answer: "Sim, o processo é totalmente seguro. A melodia usa frequências de áudio específicas projetadas para influenciar seu estado de espírito positivamente."
     },
     {
-        question: "Is there a guarantee?",
-        answer: "Absolutely. We offer a 30-day satisfaction guarantee. If you're not happy with the results, you can request a refund."
+        question: "Existe garantia?",
+        answer: "Absolutamente. Oferecemos uma garantia de satisfação de 30 dias. Se você não estiver satisfeito com os resultados, pode solicitar o reembolso."
     },
     {
-        question: "Do I need to pay a monthly fee?",
-        answer: "No, this is a one-time generation. Once you create your melody, it's yours to keep forever."
+        question: "Preciso pagar uma taxa mensal?",
+        answer: "Não, esta é uma geração única. Depois de criar sua melodia, ela é sua para sempre."
     }
 ]
 
@@ -30,7 +30,7 @@ export function FaqSection() {
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-3xl text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Frequently Asked Questions
+              Dúvidas Frequentes
             </h2>
           </div>
           <div className="mx-auto max-w-3xl">
