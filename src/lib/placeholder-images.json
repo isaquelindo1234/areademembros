@@ -1,46 +1,34 @@
 {
   "placeholderImages": [
     {
-      "id": "sound-wave-hero",
-      "description": "Uma mulher com fones de ouvido e uma onda sonora rosa emanando.",
-      "imageUrl": "https://picsum.photos/seed/soundwave/500/300",
-      "imageHint": "woman headphones soundwave"
+      "id": "hero-couple",
+      "description": "Casal feliz se abraçando",
+      "imageUrl": "https://picsum.photos/seed/herocouple/300/450",
+      "imageHint": "happy couple hug"
     },
     {
-      "id": "contemplative-woman",
-      "description": "Uma mulher olhando pensativa ou triste, representando o ponto de dor de um usuário.",
-      "imageUrl": "https://picsum.photos/seed/102/400/500",
-      "imageHint": "sad woman portrait"
+      "id": "testimonial-woman",
+      "description": "Mulher feliz",
+      "imageUrl": "https://picsum.photos/seed/testimonialwoman/400/500",
+      "imageHint": "happy woman"
     },
     {
-      "id": "happy-couple",
-      "description": "Uma imagem de um casal feliz, representando o resultado desejado.",
-      "imageUrl": "https://picsum.photos/seed/103/320/570",
-      "imageHint": "happy couple selfie"
+      "id": "testimonial-man",
+      "description": "Homem feliz",
+      "imageUrl": "https://picsum.photos/seed/testimonialman/400/500",
+      "imageHint": "happy man"
     },
     {
-      "id": "guarantee-seal",
-      "description": "Um selo ou emblema para a seção de garantia de 30 dias.",
-      "imageUrl": "https://picsum.photos/seed/104/400/400",
-      "imageHint": "guarantee seal"
+      "id": "phone-mockup",
+      "description": "Resultados no celular",
+      "imageUrl": "https://picsum.photos/seed/phonemockup/300/600",
+      "imageHint": "phone chat"
     },
     {
-      "id": "testimonial-1",
-      "description": "Espaço reservado para uma captura de tela de depoimento.",
-      "imageUrl": "https://picsum.photos/seed/105/300/400",
-      "imageHint": "chat message"
-    },
-    {
-      "id": "testimonial-2",
-      "description": "Espaço reservado para uma segunda captura de tela de depoimento.",
-      "imageUrl": "https://picsum.photos/seed/106/300/400",
-      "imageHint": "chat message"
-    },
-    {
-      "id": "pricing-image",
-      "description": "Imagem de um smartphone e fones de ouvido para a seção de preços.",
-      "imageUrl": "https://picsum.photos/seed/pricing/400/500",
-      "imageHint": "phone earbuds"
+        "id": "offer-app",
+        "description": "App Melodia do Amor",
+        "imageUrl": "https://picsum.photos/seed/offerapp/320/640",
+        "imageHint": "love app"
     }
   ]
 }
