@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "sound-wave-hero",
+      "description": "Abstract sound wave illustration for the hero section",
+      "imageUrl": "https://picsum.photos/seed/101/1200/400",
+      "imageHint": "sound wave"
+    },
+    {
+      "id": "contemplative-woman",
+      "description": "A woman looking thoughtful or sad, representing a user's pain point.",
+      "imageUrl": "https://picsum.photos/seed/102/500/500",
+      "imageHint": "sad woman"
+    },
+    {
+      "id": "happy-couple",
+      "description": "An image of a happy couple, representing the desired outcome.",
+      "imageUrl": "https://picsum.photos/seed/103/800/600",
+      "imageHint": "happy couple"
+    },
+    {
+      "id": "guarantee-seal",
+      "description": "A seal or badge for the 30-day guarantee section.",
+      "imageUrl": "https://picsum.photos/seed/104/500/500",
+      "imageHint": "guarantee seal"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "Placeholder for a testimonial screenshot.",
+      "imageUrl": "https://picsum.photos/seed/105/400/200",
+      "imageHint": "chat message"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Placeholder for a second testimonial screenshot.",
+      "imageUrl": "https://picsum.photos/seed/106/400/250",
+      "imageHint": "chat message"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Placeholder for a third testimonial screenshot.",
+      "imageUrl": "https://picsum.photos/seed/107/400/220",
+      "imageHint": "chat message"
+    }
+  ]
 }
