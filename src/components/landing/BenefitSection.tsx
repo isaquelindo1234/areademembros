@@ -13,7 +13,7 @@ export function BenefitSection() {
                 alt="Mujer con energía a su alrededor"
                 width={500}
                 height={600}
-                className="rounded-xl w-full max-w-md h-auto object-cover"
+                className="rounded-xl w-full h-auto object-cover"
                 data-ai-hint="woman energy"
               />
               <div className="absolute -inset-6 bg-primary/20 rounded-full blur-3xl -z-10"></div>
