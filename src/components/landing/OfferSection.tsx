@@ -24,9 +24,9 @@ export function OfferSection() {
 
                 <div className="max-w-4xl mx-auto bg-gradient-to-br from-white/10 to-transparent border border-primary/50 rounded-2xl p-6 md:p-10 shadow-2xl glowing-shadow">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
-                        <div className="space-y-6 text-center lg:order-first order-last">
+                        <div className="space-y-6 text-center lg:order-last lg:text-left">
                              <div className="space-y-2 text-center">
-                                <p className="text-lg text-white/80 font-body">antes <span className="line-through">$27.00</span></p>
+                                <p className="text-lg text-white/80 font-body">antes <span className="line-through">$37.00</span></p>
                                 <p className="text-lg text-white/80 font-body">ahora por solo</p>
                                 <div className="text-6xl md:text-7xl font-headline font-bold text-white">
                                     $9.00
@@ -42,7 +42,7 @@ export function OfferSection() {
                              </div>
                         </div>
 
-                        <div className="flex justify-center">
+                        <div className="flex justify-center lg:order-first">
                             <Image
                                 src="https://i.postimg.cc/rw6Pkdn9/Whisk-2efa6b0579898fc85bd4a2d03adb581fdr-removebg-preview.png"
                                 alt="Caja del producto"
