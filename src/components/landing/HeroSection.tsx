@@ -27,7 +27,7 @@ export function HeroSection() {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-xl md:text-2xl font-bold text-primary mb-4 font-headline">
-            Haz que él regrese a ti…
+            Él no te ha olvidado… solo necesita sentir tu energía otra vez. Escucha esta frecuencia 5 minutos al día y observa lo que pasa.
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-headline font-bold text-white leading-tight mb-6">
             en solo 5 minutos por día
