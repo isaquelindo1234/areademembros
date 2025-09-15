@@ -28,13 +28,16 @@ export function TestimonialSection() {
 
           <div className="space-y-4 text-white/80 font-body text-base leading-relaxed max-w-xl mx-auto text-center">
               <p>
-                Esa sensación de vacío, de mirar el celular esperando un mensaje que no llega. La ansiedad de revisar sus redes sociales y ver que está online, pero no habla contigo. Duele, ¿verdad?
+                Veía a otras mujeres recibiendo flores, mensajes, amor... Y yo ahí, esperando que sonara el celular, mirando sus historias, sintiendo que me estaba olvidando.
               </p>
               <p>
-                Yo también sentí mi mundo desmoronarse. Probé de todo: el contacto cero, los consejos de amigas, los rituales complicados… y nada parecía funcionar. Solo me sentía más lejos de él y de mí misma.
+                Me preguntaba: <strong className="text-white">¿Qué estoy haciendo mal?</strong> ¿Será que no soy suficiente? ¿Será que el amor no es para mí?
               </p>
               <p>
-                Fue en mi punto más bajo que descubrí el poder de las frecuencias vibracionales. Entendí que no se trataba de cambiarlo a él, sino de cambiar mi propia energía para volver a atraerlo de forma natural. Y funcionó.
+                No... solo estaba vibrando en la frecuencia equivocada. Cuando descubrí esta <span className="text-primary font-semibold">FRECUENCIA DEL REENCUENTRO</span>, todo cambió. Sentí como si alguien hubiese desbloqueado algo en mí.
+              </p>
+              <p>
+                Después de escucharla, <strong className="text-white">él me escribió.</strong> No fue magia. Fue energía alineada... y funciona.
               </p>
           </div>
 
