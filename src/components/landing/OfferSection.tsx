@@ -43,7 +43,10 @@ export function OfferSection() {
                 </div>
               </div>
               <div className="pt-4 flex flex-col items-center">
-                <Button size="lg" className="w-full max-w-sm text-xl h-auto py-4 px-8 font-bold font-body btn-glow btn-gradient-2 rounded-full" onClick={scrollToOffer}>
+                <Button 
+                  className="w-full max-w-[320px] text-base h-auto py-4 px-6 font-bold font-body btn-glow btn-gradient-2 rounded-full my-5 mx-auto block" 
+                  onClick={scrollToOffer}
+                >
                   QUIERO ESCUCHAR LA MELODÍA
                 </Button>
                 <p className="text-xs text-white/70 mt-3 text-center max-w-xs">
