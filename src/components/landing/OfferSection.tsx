@@ -5,13 +5,6 @@ import { Music2 } from "lucide-react";
 import Image from "next/image";
 
 export function OfferSection() {
-  const scrollToOffer = () => {
-    const offerSection = document.getElementById('offer');
-    if (offerSection) {
-      offerSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const deliverables = [
     "Melodía del Amor para que él rеgrеѕе a ti",
     "Melodía para atraer a tu pareja ideal",
@@ -43,12 +36,18 @@ export function OfferSection() {
                 </div>
               </div>
               <div className="pt-4 flex flex-col items-center">
-                <Button 
-                  className="w-full max-w-[320px] text-base h-auto py-4 px-6 font-bold font-body btn-glow btn-gradient-2 rounded-full my-5 mx-auto block" 
-                  onClick={scrollToOffer}
+                <a 
+                  href="https://pay.hotmart.com/E101916835T?off=h7rlii2k&checkoutMode=10" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full max-w-[320px] mx-auto block my-5"
                 >
-                  QUIERO ESCUCHAR LA MELODÍA
-                </Button>
+                  <Button 
+                    className="w-full text-base h-auto py-4 px-6 font-bold font-body btn-glow btn-gradient-2 rounded-full"
+                  >
+                    QUIERO ESCUCHAR LA MELODÍA
+                  </Button>
+                </a>
                 <p className="text-xs text-white/70 mt-3 text-center max-w-xs">
                   Precio en dólar (USD). Al pagar, la plataforma convierte automaticamente a tu moneda local
                 </p>
