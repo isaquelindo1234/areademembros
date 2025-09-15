@@ -9,12 +9,12 @@ export function BenefitSection() {
           <div className="flex justify-center">
             <div className="relative">
               <Image
-                src="https://i.postimg.cc/62hMvZ4j/mulher-com-fundo-energetico.png"
-                alt="Mulher com energia a su alrededor"
+                src="https://i.postimg.cc/W1nRNz6B/Chat-GPT-Image-15-de-set-de-2025-11-47-41.png"
+                alt="Caja del producto Frequencia del Reencuentro"
                 width={500}
                 height={500}
                 className="rounded-xl h-auto object-cover"
-                data-ai-hint="woman energy"
+                data-ai-hint="mystical box"
               />
               <div className="absolute -inset-6 bg-primary/20 rounded-full blur-3xl -z-10"></div>
             </div>

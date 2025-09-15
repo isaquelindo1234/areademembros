@@ -57,12 +57,12 @@ export function OfferSection() {
 
                         <div className="flex justify-center">
                             <Image
-                                src="https://i.postimg.cc/W1nRNz6B/Chat-GPT-Image-15-de-set-de-2025-11-47-41.png"
-                                alt="Caja del producto Frequencia del Reencuentro"
+                                src="https://i.postimg.cc/62hMvZ4j/mulher-com-fundo-energetico.png"
+                                alt="Mulher com energia a su alrededor"
                                 width={350}
                                 height={350}
                                 className="object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] w-full max-w-xs h-auto rounded-xl"
-                                data-ai-hint="mystical box"
+                                data-ai-hint="woman energy"
                             />
                         </div>
                     </div>
