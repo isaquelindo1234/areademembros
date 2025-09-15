@@ -8,7 +8,6 @@ import { FaqSection } from '@/components/landing/FaqSection';
 import { Footer } from '@/components/landing/Footer';
 import { BenefitSection } from '@/components/landing/BenefitSection';
 import { ParticleBackground } from '@/components/landing/ParticleBackground';
-import { FixedCta } from '@/components/landing/FixedCta';
 
 export default function Home() {
   return (
@@ -25,7 +24,6 @@ export default function Home() {
         <FaqSection />
       </main>
       <Footer />
-      <FixedCta />
     </div>
   );
 }
