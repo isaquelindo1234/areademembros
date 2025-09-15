@@ -6,14 +6,6 @@ import Image from "next/image";
 
 export function OfferSection() {
 
-    const features = [
-        "Frecuencia de Reencuentro (5 min)",
-        "Audio para Reprogramación de Creencias",
-        "Guía de Manifestación del Amor",
-        "Acceso Vitalicio y Descargas",
-        "Garantía de 30 Días",
-    ];
-
     const scrollToOffer = () => {
         const offerSection = document.getElementById('offer');
         if(offerSection) {
