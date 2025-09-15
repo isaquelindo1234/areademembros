@@ -24,7 +24,7 @@ export function OfferSection() {
 
                 <div className="max-w-4xl mx-auto bg-gradient-to-br from-white/10 to-transparent border border-primary/50 rounded-2xl p-6 md:p-10 shadow-2xl glowing-shadow">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
-                        <div className="space-y-6 text-center lg:text-left">
+                        <div className="space-y-6 text-center">
                              <div className="space-y-2 text-center">
                                 <p className="text-lg text-white/80 font-body">antes <span className="line-through">$27.00</span></p>
                                 <p className="text-lg text-white/80 font-body">ahora por solo</p>
