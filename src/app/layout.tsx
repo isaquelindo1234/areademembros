@@ -24,7 +24,7 @@ export default function RootLayout({
   `;
 
   const pixelScript = `
-    window.pixelId = "68c8a3759fa18ce3cc7a34c8";
+    window.pixelId = "68c8a71af3ef779533afca6a";
     var a = document.createElement("script");
     a.setAttribute("async", "");
     a.setAttribute("defer", "");
