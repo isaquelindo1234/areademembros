@@ -1,13 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { HeartPulse, Waves } from "lucide-react";
 
 export function HeroSection() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-audio-icon');
 
   return (
     <section
@@ -26,16 +23,6 @@ export function HeroSection() {
           </p>
 
           <div className="relative w-48 h-48 mx-auto mb-8 flex items-center justify-center">
-            {heroImage && (
-                 <Image
-                    src={heroImage.imageUrl}
-                    alt={heroImage.description}
-                    width={180}
-                    height={180}
-                    className="object-contain"
-                    data-ai-hint={heroImage.imageHint}
-                />
-            )}
             <HeartPulse className="absolute text-primary animate-ping w-24 h-24 opacity-50"/>
             <Waves className="absolute text-white/20 animate-pulse w-48 h-48"/>
           </div>
