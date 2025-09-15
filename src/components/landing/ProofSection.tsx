@@ -30,17 +30,6 @@ export function ProofSection() {
                         </Card>
                     )}
                     
-                    <div className="relative group cursor-pointer w-full max-w-xs">
-                        <Image
-                            src="https://i.postimg.cc/26sMgFkD/image.png"
-                            alt="Testimonio en video"
-                            width={320}
-                            height={570}
-                            className="rounded-2xl shadow-2xl shadow-primary/20 w-full h-auto"
-                            data-ai-hint="chat message"
-                        />
-                    </div>
-
                     {image2 && (
                          <Card className="bg-transparent border-0 shadow-none w-full max-w-md">
                             <CardContent className="flex aspect-[9/16] items-center justify-center p-0">
