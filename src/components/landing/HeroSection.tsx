@@ -46,15 +46,6 @@ export function HeroSection() {
             >
               🎧 Escuchar la frecuencia ahora
             </Button>
-
-            <Image
-              src="https://i.postimg.cc/VNbQfSjC/image.png"
-              alt="Payment methods"
-              width={250}
-              height={45}
-              className="object-contain"
-              data-ai-hint="payment methods"
-            />
             
             <div className="flex items-center gap-3 pt-2">
               <div className="flex -space-x-2">
