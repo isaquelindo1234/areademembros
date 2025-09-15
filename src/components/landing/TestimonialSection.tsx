@@ -1,8 +1,6 @@
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function TestimonialSection() {
-    const testimonialWoman = PlaceHolderImages.find(p => p.id === 'sad-woman');
 
   return (
     <section className="py-8 md:py-16 bg-white/5">
@@ -16,16 +14,14 @@ export function TestimonialSection() {
           
           <div className="flex justify-center">
              <div className="relative">
-                {testimonialWoman && (
-                    <Image
-                        src={testimonialWoman.imageUrl}
-                        alt={testimonialWoman.description}
-                        width={400}
-                        height={500}
-                        className="rounded-xl shadow-2xl shadow-black/50 w-full max-w-sm h-auto object-cover"
-                        data-ai-hint={testimonialWoman.imageHint}
-                    />
-                )}
+                <Image
+                    src="https://i.postimg.cc/BZLNTfCL/Design-sem-nome-19.png"
+                    alt="Mujer pensativa o triste"
+                    width={400}
+                    height={500}
+                    className="rounded-xl shadow-2xl shadow-black/50 w-full max-w-sm h-auto object-cover"
+                    data-ai-hint="woman testimonial"
+                />
                 <div className="absolute -inset-4 border-2 border-primary/30 rounded-2xl -z-10 animate-pulse"></div>
              </div>
           </div>
