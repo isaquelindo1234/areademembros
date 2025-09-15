@@ -11,9 +11,9 @@ export function BenefitSection() {
               <Image
                 src="https://i.postimg.cc/rFZWvC73/Chat-GPT-Image-15-de-set-de-2025-11-47-41-removebg-preview.png"
                 alt="Mujer con energía a su alrededor"
-                width={400}
-                height={500}
-                className="rounded-xl w-full max-w-sm h-auto object-cover"
+                width={500}
+                height={600}
+                className="rounded-xl w-full max-w-md h-auto object-cover"
                 data-ai-hint="woman energy"
               />
               <div className="absolute -inset-6 bg-primary/20 rounded-full blur-3xl -z-10"></div>
