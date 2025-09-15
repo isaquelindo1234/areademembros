@@ -22,7 +22,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden py-16 md:py-24"
+      className="relative overflow-hidden pt-16 pb-8 md:pt-24 md:pb-16"
     >
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
