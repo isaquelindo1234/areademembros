@@ -9,7 +9,7 @@ export function BenefitSection() {
           <div className="flex justify-center">
             <div className="relative">
               <Image
-                src="https://i.postimg.cc/W1nRNz6B/Chat-GPT-Image-15-de-set-de-2025-11-47-41.png"
+                src="https://i.postimg.cc/rFZWvC73/Chat-GPT-Image-15-de-set-de-2025-11-47-41-removebg-preview.png"
                 alt="Caja del producto Frequencia del Reencuentro"
                 width={500}
                 height={500}
