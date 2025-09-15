@@ -9,8 +9,8 @@ export function BenefitSection() {
           <div className="flex justify-center">
             <div className="relative">
               <Image
-                src="https://i.postimg.cc/rFZWvC73/Chat-GPT-Image-15-de-set-de-2025-11-47-41-removebg-preview.png"
-                alt="Mujer con energía a su alrededor"
+                src="https://i.postimg.cc/62hMvZ4j/mulher-com-fundo-energetico.png"
+                alt="Mulher com energia a su alrededor"
                 width={500}
                 height={500}
                 className="rounded-xl h-auto object-cover"
