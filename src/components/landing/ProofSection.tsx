@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function ProofSection() {
-    const image2 = PlaceHolderImages.find(p => p.id === "testimonial-2");
 
     return (
         <section className="py-8 md:py-16">
@@ -27,20 +26,18 @@ export function ProofSection() {
                         </CardContent>
                     </Card>
                     
-                    {image2 && (
-                         <Card className="bg-transparent border-0 shadow-none w-full max-w-md">
-                            <CardContent className="flex aspect-video items-center justify-center p-0">
-                                <Image
-                                    src={image2.imageUrl}
-                                    alt={`Testimonio 2`}
-                                    width={400}
-                                    height={711}
-                                    className="rounded-xl object-contain w-full h-auto"
-                                    data-ai-hint={image2.imageHint}
-                                />
-                            </CardContent>
-                        </Card>
-                    )}
+                    <Card className="bg-transparent border-0 shadow-none w-full max-w-md">
+                        <CardContent className="flex aspect-video items-center justify-center p-0">
+                            <Image
+                                src="https://i.postimg.cc/W45QwW5W/image.png"
+                                alt={`Testimonio 2`}
+                                width={400}
+                                height={711}
+                                className="rounded-xl object-contain w-full h-auto"
+                                data-ai-hint="chat message"
+                            />
+                        </CardContent>
+                    </Card>
                 </div>
             </div>
         </section>
