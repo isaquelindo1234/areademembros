@@ -8,10 +8,11 @@ import { FaqSection } from '@/components/landing/FaqSection';
 import { Footer } from '@/components/landing/Footer';
 import { BenefitSection } from '@/components/landing/BenefitSection';
 import { ParticleBackground } from '@/components/landing/ParticleBackground';
+import { FixedCta } from '@/components/landing/FixedCta';
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-screen flex-col bg-background">
+    <div className="relative flex min-h-screen flex-col bg-background overflow-x-hidden">
       <ParticleBackground />
       <main className="flex-1 z-10">
         <HeroSection />
@@ -24,6 +25,7 @@ export default function Home() {
         <FaqSection />
       </main>
       <Footer />
+      <FixedCta />
     </div>
   );
 }

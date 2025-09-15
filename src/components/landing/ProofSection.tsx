@@ -20,16 +20,16 @@ export function ProofSection() {
     ];
 
     return (
-        <section className="py-20">
-            <div className="container mx-auto px-6">
+        <section className="py-16 md:py-24">
+            <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-white text-3xl md:text-4xl font-headline font-bold mb-4">
                         Más de 8.000 mujeres ya lo usaron…
                     </h2>
                 </div>
                 <div className="grid lg:grid-cols-2 gap-10 items-center">
-                    <div>
-                         <Carousel opts={{ loop: true }} className="w-full max-w-md mx-auto">
+                    <div className="w-full max-w-md mx-auto">
+                         <Carousel opts={{ loop: true }} className="w-full">
                             <CarouselContent>
                                 {testimonials.map((testimonial, index) => {
                                     const image = PlaceHolderImages.find(p => p.id === testimonial.id);
@@ -37,14 +37,14 @@ export function ProofSection() {
                                         <CarouselItem key={index}>
                                             <div className="p-1">
                                                 <Card className="bg-transparent border-0 shadow-none">
-                                                    <CardContent className="flex aspect-square items-center justify-center p-0">
+                                                    <CardContent className="flex aspect-[9/16] items-center justify-center p-0">
                                                         {image && (
                                                             <Image
                                                                 src={image.imageUrl}
                                                                 alt={`Testimonio ${index + 1}`}
                                                                 width={400}
-                                                                height={600}
-                                                                className="rounded-xl object-cover"
+                                                                height={711}
+                                                                className="rounded-xl object-cover w-full h-full"
                                                                 data-ai-hint={image.imageHint}
                                                             />
                                                         )}
@@ -60,19 +60,19 @@ export function ProofSection() {
                         </Carousel>
                     </div>
                     <div className="flex justify-center">
-                        <div className="relative group cursor-pointer">
+                        <div className="relative group cursor-pointer w-full max-w-xs">
                             {videoThumbnail && (
                                 <Image
                                     src={videoThumbnail.imageUrl}
                                     alt={videoThumbnail.description}
                                     width={320}
                                     height={570}
-                                    className="rounded-3xl shadow-2xl shadow-primary/20 w-[300px] h-auto"
+                                    className="rounded-3xl shadow-2xl shadow-primary/20 w-full h-auto"
                                     data-ai-hint={videoThumbnail.imageHint}
                                 />
                             )}
                             <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300 rounded-3xl flex items-center justify-center">
-                                <PlayCircle className="w-20 h-20 text-white/80 group-hover:text-white group-hover:scale-110 transition-transform duration-300"/>
+                                <PlayCircle className="w-16 h-16 md:w-20 md:h-20 text-white/80 group-hover:text-white group-hover:scale-110 transition-transform duration-300"/>
                             </div>
                         </div>
                     </div>
