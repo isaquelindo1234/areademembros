@@ -50,7 +50,7 @@ export function OfferSection() {
                                     </li>
                                 ))}
                              </ul>
-                             <div className="pt-4 hidden md:block">
+                             <div className="pt-4">
                                 <Button size="lg" className="w-full text-xl h-auto py-4 px-8 font-bold font-body btn-glow" onClick={scrollToOffer}>
                                     Quiero escuchar ahora
                                 </Button>
