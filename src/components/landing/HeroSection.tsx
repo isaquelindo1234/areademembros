@@ -13,9 +13,9 @@ export function HeroSection() {
   }
 
   const avatars = [
-    "https://picsum.photos/seed/avatar1/40/40",
-    "https://picsum.photos/seed/avatar2/40/40",
-    "https://picsum.photos/seed/avatar3/40/40",
+    "https://i.pinimg.com/1200x/b7/3f/c0/b73fc0869f0cf140e280f48f012e1f5b.jpg",
+    "https://i.pinimg.com/1200x/15/fd/dc/15fddc6fc5fd2e4cb1da689604bf45b7.jpg",
+    "https://i.pinimg.com/736x/ef/ca/78/efca789620a79774599970c6829032f1.jpg",
   ]
 
   return (
