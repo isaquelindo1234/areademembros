@@ -20,33 +20,28 @@ export function BenefitSection() {
             </div>
           </div>
           <div className="space-y-6 text-center lg:text-left">
-            <Sparkles className="w-12 h-12 text-primary mx-auto lg:mx-0" />
-            <h2 className="text-2xl md:text-3xl font-headline font-bold text-white">
+            <h2 className="text-2xl md:text-3xl font-headline font-bold text-white text-center">
+              <Sparkles className="w-8 h-8 text-primary mx-auto mb-2" />
               Reprograma tu energía para reconectar los lazos afectivos
             </h2>
             <div className="font-body text-base text-white/80 leading-relaxed max-w-xl mx-auto lg:mx-0 space-y-4">
               <p>
-                Esta frecuencia es tan poderosa que te da una{' '}
+                Esta frecuencia te da una{' '}
                 <strong className="text-primary font-medium">
-                  ventaja energética injusta
-                </strong>{' '}
-                sobre cualquier otra mujer. Y te lo digo desde ya: si no estás
-                lista para ser deseada, buscada y recordada intensamente por
-                ese hombre… <strong className="text-white">no la escuches.</strong>
+                  ventaja vibracional injusta
+                </strong>
+                . Si no estás lista para ser deseada, buscada y recordada…{' '}
+                <strong className="text-white">no la escuches.</strong>
               </p>
               <p>
-                Llevo años viendo mujeres repetir los mismos errores: contacto
-                cero, técnicas de manipulación emocional, eBooks de “cómo
-                recuperar a tu ex”...{' '}
+                Ya probaste contacto cero, mensajes fríos y mil teorías vacías.{' '}
                 <strong className="text-primary">
-                  Nada de eso despierta la conexión real.
+                  Nada de eso funciona.
                 </strong>
               </p>
               <p>
-                Yo lo intenté todo. Lo que tú ya hiciste... yo también. Pero
-                cuando activé esta frecuencia,{' '}
-                <strong className="text-white">sentí algo diferente.</strong> No era lógica. Era
-                energía. Y ahí fue cuando todo empezó a cambiar.
+                Yo también lo intenté todo. Hasta que activé esta frecuencia…{' '}
+                <em className="text-white not-italic">y sentí algo diferente.</em>
               </p>
             </div>
           </div>
