@@ -15,12 +15,12 @@ export function TestimonialSection() {
           <div className="flex justify-center">
              <div className="relative">
                 <Image
-                    src="https://yt3.ggpht.com/EOrOLOUBZdvIdFZk576zIHPKFrhnqif4Rq_2sWaYd8l30DIAk5raW_eddK89jbdJ5Sl_AAqFyQ=s88-c-k-c0x00ffffff-no-rj"
+                    src="https://picsum.photos/seed/sadwoman/400/500"
                     alt="Mujer pensativa o triste"
                     width={400}
                     height={500}
                     className="rounded-xl shadow-2xl shadow-black/50 w-full max-w-sm h-auto object-cover"
-                    data-ai-hint="woman testimonial"
+                    data-ai-hint="sad woman"
                 />
                 <div className="absolute -inset-4 border-2 border-primary/30 rounded-2xl -z-10 animate-pulse"></div>
              </div>
