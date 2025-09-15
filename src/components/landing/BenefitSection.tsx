@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BrainCircuit } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export function BenefitSection() {
   return (
@@ -20,19 +20,19 @@ export function BenefitSection() {
             </div>
           </div>
           <div className="space-y-6 text-center lg:text-left">
-            <BrainCircuit className="w-12 h-12 text-primary mx-auto lg:mx-0" />
+            <Sparkles className="w-12 h-12 text-primary mx-auto lg:mx-0" />
             <h2 className="text-2xl md:text-3xl font-headline font-bold text-white">
               Reprograma tu energía para reconectar los lazos afectivos
             </h2>
             <div className="font-body text-base text-white/80 leading-relaxed max-w-xl mx-auto lg:mx-0 space-y-4">
               <p>
                 Esta frecuencia es tan poderosa que te da una{' '}
-                <strong className="text-primary">
+                <strong className="text-primary font-medium">
                   ventaja energética injusta
                 </strong>{' '}
                 sobre cualquier otra mujer. Y te lo digo desde ya: si no estás
                 lista para ser deseada, buscada y recordada intensamente por
-                ese hombre… <strong>no la escuches.</strong>
+                ese hombre… <strong className="text-white">no la escuches.</strong>
               </p>
               <p>
                 Llevo años viendo mujeres repetir los mismos errores: contacto
@@ -45,7 +45,7 @@ export function BenefitSection() {
               <p>
                 Yo lo intenté todo. Lo que tú ya hiciste... yo también. Pero
                 cuando activé esta frecuencia,{' '}
-                <strong>sentí algo diferente.</strong> No era lógica. Era
+                <strong className="text-white">sentí algo diferente.</strong> No era lógica. Era
                 energía. Y ahí fue cuando todo empezó a cambiar.
               </p>
             </div>
