@@ -60,7 +60,7 @@ export function OfferSection() {
                         <div className="flex justify-center">
                             {offerImage && (
                                 <Image
-                                    src={offerImage.imageUrl}
+                                    src="https://i.postimg.cc/W1nRNz6B/Chat-GPT-Image-15-de-set-de-2025-11-47-41.png"
                                     alt={offerImage.description}
                                     width={350}
                                     height={350}
