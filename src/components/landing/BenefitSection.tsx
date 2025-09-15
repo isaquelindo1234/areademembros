@@ -13,11 +13,11 @@ export function BenefitSection() {
             <div className="relative">
                 {benefitImage && (
                     <Image
-                        src="https://i.postimg.cc/W1nRNz6B/Chat-GPT-Image-15-de-set-de-2025-11-47-41.png"
+                        src="https://i.postimg.cc/rFZWvC73/Chat-GPT-Image-15-de-set-de-2025-11-47-41-removebg-preview.png"
                         alt={benefitImage.description}
                         width={400}
                         height={500}
-                        className="rounded-xl shadow-2xl shadow-black/50 w-full max-w-sm h-auto object-cover"
+                        className="rounded-xl w-full max-w-sm h-auto object-cover"
                         data-ai-hint={benefitImage.imageHint}
                     />
                 )}
