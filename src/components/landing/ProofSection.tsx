@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function ProofSection() {
 
@@ -18,6 +17,19 @@ export function ProofSection() {
                             <Image
                                 src="https://i.postimg.cc/26sMgFkD/image.png"
                                 alt={`Testimonio 1`}
+                                width={400}
+                                height={711}
+                                className="rounded-xl object-contain w-full h-auto"
+                                data-ai-hint="chat message"
+                            />
+                        </CardContent>
+                    </Card>
+
+                    <Card className="bg-transparent border-0 shadow-none w-full max-w-md">
+                        <CardContent className="flex items-center justify-center p-0">
+                            <Image
+                                src="https://i.postimg.cc/W45QwW5W/image.png"
+                                alt={`Testimonio 2`}
                                 width={400}
                                 height={711}
                                 className="rounded-xl object-contain w-full h-auto"
