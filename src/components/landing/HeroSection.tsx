@@ -21,31 +21,30 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden pt-12 pb-8 md:pt-20 md:pb-16 text-center"
+      className="relative overflow-hidden text-center pt-8 pb-8 md:pt-16 md:pb-16"
     >
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="max-w-xl mx-auto">
+      <div className="relative z-10 container mx-auto px-4 flex flex-col items-center">
+        <div className="max-w-md">
           
           <p className="text-primary font-semibold mb-2 text-sm md:text-base">
-            Escucha esta frecuencia durante 5 minutos
+            🔮 Escucha esta frecuencia durante 5 minutos
           </p>
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-headline font-bold text-white leading-tight mb-3">
+          <h1 className="text-3xl sm:text-4xl font-headline font-extrabold text-white leading-tight mb-4">
             Y haz que tu ex regrese<br/> corriendo a tus brazos
           </h1>
           
-          <p className="text-base md:text-lg text-white/80 font-body max-w-md mx-auto leading-relaxed mb-6">
-            Tendrás su amor en la palma de tu mano… Cuando actives este interruptor de atracción en tu mente, se abrirá el camino hacia la relación que soñaste.
+          <p className="text-base md:text-lg text-white/80 font-body max-w-sm mx-auto leading-relaxed mb-6">
+            Tendrás su amor en la palma de tu mano… Activa este interruptor de atracción en tu mente y el camino hacia la relación que soñaste se abrirá.
           </p>
 
-          <div className="flex flex-col items-center gap-5">
+          <div className="flex flex-col items-center gap-6 w-full max-w-sm">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-base h-auto py-4 px-8 font-bold font-body btn-glow glowing-shadow btn-gradient-2" 
+              className="w-full text-base h-auto py-4 px-8 font-bold font-body btn-glow glowing-shadow btn-gradient-2" 
               onClick={scrollToOffer}
             >
-              <Headphones className="w-5 h-5 mr-2" />
-              Escuchar la frecuencia ahora
+              🎧 Escuchar la frecuencia ahora
             </Button>
 
             <div className="flex items-center gap-3">
@@ -55,8 +54,8 @@ export function HeroSection() {
                     key={index}
                     src={avatar}
                     alt={`Avatar ${index + 1}`}
-                    width={32}
-                    height={32}
+                    width={36}
+                    height={36}
                     className="rounded-full border-2 border-background"
                   />
                 ))}
