@@ -3,10 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import Image from "next/image";
-import {PlaceHolderImages} from "@/lib/placeholder-images";
 
 export function OfferSection() {
-    const offerImage = PlaceHolderImages.find(p => p.id === 'offer-box');
 
     const features = [
         "Frecuencia de Reencuentro (5 min)",
@@ -51,23 +49,21 @@ export function OfferSection() {
                                 ))}
                              </ul>
                              <div className="pt-4">
-                                <Button size="lg" className="w-full text-xl h-auto py-4 px-8 font-bold font-body btn-glow" onClick={scrollToOffer}>
+                                <Button size="lg" className="w-full text-xl h-auto py-4 px-8 font-bold font-body btn-glow btn-gradient" onClick={scrollToOffer}>
                                     Quiero escuchar ahora
                                 </Button>
                              </div>
                         </div>
 
                         <div className="flex justify-center">
-                            {offerImage && (
-                                <Image
-                                    src="https://i.postimg.cc/W1nRNz6B/Chat-GPT-Image-15-de-set-de-2025-11-47-41.png"
-                                    alt={offerImage.description}
-                                    width={350}
-                                    height={350}
-                                    className="object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] w-full max-w-xs h-auto rounded-xl"
-                                    data-ai-hint={offerImage.imageHint}
-                                />
-                            )}
+                            <Image
+                                src="https://i.postimg.cc/W1nRNz6B/Chat-GPT-Image-15-de-set-de-2025-11-47-41.png"
+                                alt="Caja del producto Frequencia del Reencuentro"
+                                width={350}
+                                height={350}
+                                className="object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] w-full max-w-xs h-auto rounded-xl"
+                                data-ai-hint="mystical box"
+                            />
                         </div>
                     </div>
                 </div>

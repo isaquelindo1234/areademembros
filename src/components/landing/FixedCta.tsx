@@ -17,7 +17,7 @@ export function FixedCta() {
         className="w-full text-lg h-16 font-bold font-body btn-glow btn-gradient"
         onClick={scrollToOffer}
       >
-        QUERO OUVIR A FREQUÊNCIA
+        Quiero escuchar la frecuencia
       </Button>
     </div>
   );

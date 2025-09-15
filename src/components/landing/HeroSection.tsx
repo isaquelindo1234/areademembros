@@ -27,13 +27,13 @@ export function HeroSection() {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-xl md:text-2xl font-bold text-primary mb-4 font-headline">
-            Ouça essa melodia do amor por 5 minutos
+            Haz que él regrese a ti…
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-headline font-bold text-white leading-tight mb-6">
-            E faça o seu ex voltar correndo para você
+            en solo 5 minutos por día
           </h1>
           <p className="text-base md:text-lg text-white/80 font-body max-w-2xl mx-auto leading-relaxed mb-10">
-            Você terá ele na palma da sua mão, quando você ativar esse interruptor de atração amorosa no seu cérebro, abre-se o caminho para o relacionamento que sempre sonhou!
+            Escucha esta frecuencia del amor y activa la energía que ya ayudó a miles de mujeres latinas a reconectar con sus parejas.
           </p>
 
           <div className="flex flex-col items-center gap-8">
@@ -42,7 +42,7 @@ export function HeroSection() {
               className="w-full md:w-auto text-lg h-16 px-10 font-bold font-body btn-glow glowing-shadow btn-gradient" 
               onClick={scrollToOffer}
             >
-              QUERO OUVIR A FREQUÊNCIA
+              Quiero escuchar la frecuencia
             </Button>
 
             <div className="flex flex-col items-center gap-3">
@@ -65,7 +65,7 @@ export function HeroSection() {
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                    </div>
-                   <p className="text-sm text-white/80 font-body mt-1">+ 5.879 mulheres</p>
+                   <p className="text-sm text-white/80 font-body mt-1">+8.000 mujeres ya escucharon</p>
                 </div>
               </div>
             </div>
