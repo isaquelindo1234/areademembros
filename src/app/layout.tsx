@@ -12,6 +12,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const scrollScript = `
+    window.onload = function () {
+      if (window.location.hash) {
+        history.replaceState(null, null, ' ');
+      }
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 0);
+    };
+  `;
+
   return (
     <html lang="es" className="dark">
       <head>
@@ -22,6 +33,7 @@ export default function RootLayout({
       <body className="font-body antialiased bg-background">
         {children}
         <Toaster />
+        <script dangerouslySetInnerHTML={{ __html: scrollScript }} />
       </body>
     </html>
   );
