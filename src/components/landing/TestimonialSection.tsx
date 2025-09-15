@@ -15,7 +15,7 @@ export function TestimonialSection() {
           <div className="flex justify-center">
              <div className="relative">
                 <Image
-                    src="https://i.postimg.cc/BZLNTfCL/Design-sem-nome-19.png"
+                    src="https://yt3.ggpht.com/EOrOLOUBZdvIdFZk576zIHPKFrhnqif4Rq_2sWaYd8l30DIAk5raW_eddK89jbdJ5Sl_AAqFyQ=s88-c-k-c0x00ffffff-no-rj"
                     alt="Mujer pensativa o triste"
                     width={400}
                     height={500}
