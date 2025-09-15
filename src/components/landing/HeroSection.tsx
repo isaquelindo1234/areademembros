@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { HeartPulse, Waves } from "lucide-react";
+import { HeartPulse } from "lucide-react";
 
 export function HeroSection() {
 
@@ -24,7 +24,6 @@ export function HeroSection() {
 
           <div className="relative w-48 h-48 mx-auto mb-8 flex items-center justify-center">
             <HeartPulse className="absolute text-primary animate-ping w-24 h-24 opacity-50"/>
-            <Waves className="absolute text-white/20 animate-pulse w-48 h-48"/>
           </div>
 
           <Button size="lg" className="text-lg h-14 px-10 font-bold font-body btn-glow glowing-shadow">
