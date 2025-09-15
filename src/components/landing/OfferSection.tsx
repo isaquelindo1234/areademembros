@@ -57,12 +57,12 @@ export function OfferSection() {
 
                         <div className="flex justify-center">
                             <Image
-                                src="https://i.postimg.cc/62hMvZ4j/mulher-com-fundo-energetico.png"
-                                alt="Mulher com energia a su alrededor"
+                                src="https://i.postimg.cc/rw6Pkdn9/Whisk-2efa6b0579898fc85bd4a2d03adb581fdr-removebg-preview.png"
+                                alt="Caja del producto"
                                 width={350}
                                 height={350}
                                 className="object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] w-full max-w-xs h-auto rounded-xl"
-                                data-ai-hint="woman energy"
+                                data-ai-hint="mystical box"
                             />
                         </div>
                     </div>
