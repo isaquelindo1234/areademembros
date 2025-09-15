@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function ProofSection() {
-    const image1 = PlaceHolderImages.find(p => p.id === "testimonial-1");
     const image2 = PlaceHolderImages.find(p => p.id === "testimonial-2");
 
     return (
@@ -15,20 +14,18 @@ export function ProofSection() {
                     </h2>
                 </div>
                 <div className="flex flex-col items-center gap-10">
-                    {image1 && (
-                        <Card className="bg-transparent border-0 shadow-none w-full max-w-md">
-                            <CardContent className="flex aspect-video items-center justify-center p-0">
-                                <Image
-                                    src={image1.imageUrl}
-                                    alt={`Testimonio 1`}
-                                    width={400}
-                                    height={711}
-                                    className="rounded-xl object-contain w-full h-auto"
-                                    data-ai-hint={image1.imageHint}
-                                />
-                            </CardContent>
-                        </Card>
-                    )}
+                    <Card className="bg-transparent border-0 shadow-none w-full max-w-md">
+                        <CardContent className="flex items-center justify-center p-0">
+                            <Image
+                                src="https://i.postimg.cc/26sMgFkD/image.png"
+                                alt={`Testimonio 1`}
+                                width={400}
+                                height={711}
+                                className="rounded-xl object-contain w-full h-auto"
+                                data-ai-hint="chat message"
+                            />
+                        </CardContent>
+                    </Card>
                     
                     {image2 && (
                          <Card className="bg-transparent border-0 shadow-none w-full max-w-md">
