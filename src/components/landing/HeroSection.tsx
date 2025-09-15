@@ -39,19 +39,13 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col items-center gap-4 w-full max-w-sm">
-            <a 
-              href="https://pay.hotmart.com/E101916835T?off=h7rlii2k&checkoutMode=10"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full"
+            <Button 
+              size="lg" 
+              className="w-full text-base h-auto py-4 px-8 font-bold font-body btn-glow glowing-shadow btn-gradient-2"
+              onClick={scrollToOffer}
             >
-              <Button 
-                size="lg" 
-                className="w-full text-base h-auto py-4 px-8 font-bold font-body btn-glow glowing-shadow btn-gradient-2"
-              >
-                🎧 Escuchar la frecuencia ahora
-              </Button>
-            </a>
+              🎧 Escuchar la frecuencia ahora
+            </Button>
             
             <div className="flex items-center gap-3 pt-2">
               <div className="flex -space-x-2">
@@ -82,3 +76,5 @@ export function HeroSection() {
     </section>
   );
 }
+
+    
