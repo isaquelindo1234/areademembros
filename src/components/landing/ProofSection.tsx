@@ -1,10 +1,8 @@
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
-import { PlayCircle } from "lucide-react";
 
 export function ProofSection() {
-    const videoThumbnail = PlaceHolderImages.find(p => p.id === 'tiktok-video');
     const image1 = PlaceHolderImages.find(p => p.id === "testimonial-1");
     const image2 = PlaceHolderImages.find(p => p.id === "testimonial-2");
 
@@ -33,19 +31,14 @@ export function ProofSection() {
                     )}
                     
                     <div className="relative group cursor-pointer w-full max-w-xs">
-                        {videoThumbnail && (
-                            <Image
-                                src={videoThumbnail.imageUrl}
-                                alt={videoThumbnail.description}
-                                width={320}
-                                height={570}
-                                className="rounded-2xl shadow-2xl shadow-primary/20 w-full h-auto"
-                                data-ai-hint={videoThumbnail.imageHint}
-                            />
-                        )}
-                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300 rounded-2xl flex items-center justify-center">
-                            <PlayCircle className="w-16 h-16 text-white/80 group-hover:text-white group-hover:scale-110 transition-transform duration-300"/>
-                        </div>
+                        <Image
+                            src="https://i.postimg.cc/26sMgFkD/image.png"
+                            alt="Testimonio en video"
+                            width={320}
+                            height={570}
+                            className="rounded-2xl shadow-2xl shadow-primary/20 w-full h-auto"
+                            data-ai-hint="chat message"
+                        />
                     </div>
 
                     {image2 && (
