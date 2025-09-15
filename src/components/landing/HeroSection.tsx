@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react";
+import { Star, Headphones } from "lucide-react";
 
 export function HeroSection() {
   const scrollToOffer = () => {
@@ -16,57 +16,58 @@ export function HeroSection() {
     "https://picsum.photos/seed/avatar1/40/40",
     "https://picsum.photos/seed/avatar2/40/40",
     "https://picsum.photos/seed/avatar3/40/40",
-    "https://picsum.photos/seed/avatar4/40/40",
-    "https://picsum.photos/seed/avatar5/40/40",
   ]
 
   return (
     <section
-      className="relative overflow-hidden pt-16 pb-8 md:pt-24 md:pb-16"
+      id="hero"
+      className="relative overflow-hidden pt-12 pb-8 md:pt-20 md:pb-16 text-center"
     >
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xl md:text-2xl font-bold text-primary mb-4 font-headline">
-            Él no te ha olvidado… solo necesita sentir tu energía otra vez. Escucha esta frecuencia 5 minutos al día y observa lo que pasa.
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="max-w-xl mx-auto">
+          
+          <p className="text-primary font-semibold mb-2 text-sm md:text-base">
+            Escucha esta frecuencia durante 5 minutos
           </p>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-headline font-bold text-white leading-tight mb-6">
-            en solo 5 minutos por día
+          
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-headline font-bold text-white leading-tight mb-3">
+            Y haz que tu ex regrese<br/> corriendo a tus brazos
           </h1>
-          <p className="text-base md:text-lg text-white/80 font-body max-w-2xl mx-auto leading-relaxed mb-8">
-            Miles de mujeres ya lo probaron… Y muchas recibieron el mensaje que tanto esperaban.
+          
+          <p className="text-base md:text-lg text-white/80 font-body max-w-md mx-auto leading-relaxed mb-6">
+            Tendrás su amor en la palma de tu mano… Cuando actives este interruptor de atracción en tu mente, se abrirá el camino hacia la relación que soñaste.
           </p>
 
-          <div className="flex flex-col items-center gap-8">
+          <div className="flex flex-col items-center gap-5">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-lg h-16 px-10 font-bold font-body btn-glow glowing-shadow btn-gradient" 
+              className="w-full md:w-auto text-base h-auto py-4 px-8 font-bold font-body btn-glow glowing-shadow btn-gradient-2" 
               onClick={scrollToOffer}
             >
-              Quiero escuchar la frecuencia
+              <Headphones className="w-5 h-5 mr-2" />
+              Escuchar la frecuencia ahora
             </Button>
 
-            <div className="flex flex-col items-center gap-3">
-              <div className="flex items-center">
-                <div className="flex -space-x-4">
-                  {avatars.map((avatar, index) => (
-                    <Image 
-                      key={index}
-                      src={avatar}
-                      alt={`Avatar ${index + 1}`}
-                      width={40}
-                      height={40}
-                      className="rounded-full border-2 border-background"
-                    />
+            <div className="flex items-center gap-3">
+              <div className="flex -space-x-2">
+                {avatars.map((avatar, index) => (
+                  <Image 
+                    key={index}
+                    src={avatar}
+                    alt={`Avatar ${index + 1}`}
+                    width={32}
+                    height={32}
+                    className="rounded-full border-2 border-background"
+                  />
+                ))}
+              </div>
+              <div className="text-left">
+                 <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
-                </div>
-                <div className="ml-4 flex flex-col items-start">
-                   <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                   </div>
-                   <p className="text-sm text-white/80 font-body mt-1">+8.000 mujeres ya escucharon</p>
-                </div>
+                 </div>
+                 <p className="text-xs text-white/80 font-body mt-1">+8.000 mujeres ya escucharon</p>
               </div>
             </div>
           </div>

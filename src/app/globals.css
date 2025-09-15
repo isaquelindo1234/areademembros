@@ -10,7 +10,7 @@
     --card-foreground: 210 40% 98%;
     --popover: 224 71% 4%;
     --popover-foreground: 210 40% 98%;
-    --primary: 336 78% 57%; /* #D81E5B */
+    --primary: 332 100% 60%; /* #FF2DAF */
     --primary-foreground: 210 40% 98%;
     --secondary: 48 96% 72%; /* Soft Gold */
     --secondary-foreground: 259 34% 10%;
@@ -22,8 +22,8 @@
     --destructive-foreground: 0 0% 98%;
     --border: 217 33% 17%;
     --input: 217 33% 17%;
-    --ring: 336 78% 57%;
-    --radius: 0.5rem;
+    --ring: 332 100% 60%;
+    --radius: 0.75rem; /* 12px */
   }
 
   .dark {
@@ -33,7 +33,7 @@
     --card-foreground: 210 40% 98%;
     --popover: 224 71% 4%;
     --popover-foreground: 210 40% 98%;
-    --primary: 336 78% 57%;
+    --primary: 332 100% 60%;
     --primary-foreground: 210 40% 98%;
     --secondary: 48 96% 72%; /* Soft Gold */
     --secondary-foreground: 259 34% 10%;
@@ -45,7 +45,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 217 33% 17%;
     --input: 217 33% 17%;
-    --ring: 336 78% 57%;
+    --ring: 332 100% 60%;
   }
 }
 
@@ -60,11 +60,15 @@
 
 @layer components {
   .glowing-shadow {
-    box-shadow: 0 0 15px 0px hsl(var(--primary) / 0.6), 0 0 30px 0px hsl(var(--primary) / 0.4);
+    box-shadow: 0 0 18px 0px hsla(var(--primary), 0.5);
   }
   
   .btn-gradient {
     @apply bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white;
+  }
+
+  .btn-gradient-2 {
+    background-image: linear-gradient(90deg, #ff2daf, #cc1aff);
   }
 
   .btn-glow:hover {
