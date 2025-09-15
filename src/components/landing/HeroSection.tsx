@@ -38,7 +38,7 @@ export function HeroSection() {
             Tendrás su amor en la palma de tu mano… Activa este interruptor de atracción en tu mente y el camino hacia la relación que soñaste se abrirá.
           </p>
 
-          <div className="flex flex-col items-center gap-6 w-full max-w-sm">
+          <div className="flex flex-col items-center gap-4 w-full max-w-sm">
             <Button 
               size="lg" 
               className="w-full text-base h-auto py-4 px-8 font-bold font-body btn-glow glowing-shadow btn-gradient-2" 
@@ -47,7 +47,16 @@ export function HeroSection() {
               🎧 Escuchar la frecuencia ahora
             </Button>
 
-            <div className="flex items-center gap-3">
+            <Image
+              src="https://i.postimg.cc/VNbQfSjC/image.png"
+              alt="Payment methods"
+              width={250}
+              height={45}
+              className="object-contain"
+              data-ai-hint="payment methods"
+            />
+            
+            <div className="flex items-center gap-3 pt-2">
               <div className="flex -space-x-2">
                 {avatars.map((avatar, index) => (
                   <Image 
