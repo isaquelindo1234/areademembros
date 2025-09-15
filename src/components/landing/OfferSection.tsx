@@ -33,25 +33,28 @@ export function OfferSection() {
                 <div className="max-w-4xl mx-auto bg-gradient-to-br from-white/10 to-transparent border border-primary/50 rounded-2xl p-6 md:p-10 shadow-2xl glowing-shadow">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                         <div className="space-y-6 text-center lg:text-left">
-                             <div className="space-y-4">
-                                <p className="text-lg text-white/80 font-body">Acceso completo por un pago único de:</p>
-                                <div className="text-5xl md:text-6xl font-headline font-bold text-white">
-                                    <span className="line-through text-2xl md:text-3xl text-white/50 mr-2">$37</span>$9
+                             <div className="space-y-2 text-center">
+                                <p className="text-lg text-white/80 font-body">antes <span className="line-through">$27.00</span></p>
+                                <p className="text-lg text-white/80 font-body">ahora por solo</p>
+                                <div className="text-6xl md:text-7xl font-headline font-bold text-white">
+                                    $9.00
                                 </div>
-                                <p className="text-secondary font-body font-semibold">¡Oferta especial por lanzamiento!</p>
                              </div>
-                             <ul className="space-y-3 text-left max-w-xs mx-auto lg:mx-0">
-                                {features.map((feature, index) => (
-                                     <li key={index} className="flex items-center gap-3 font-body text-white/90">
-                                        <Check className="w-5 h-5 text-green-400 flex-shrink-0"/>
-                                        <span>{feature}</span>
-                                    </li>
-                                ))}
-                             </ul>
-                             <div className="pt-4">
-                                <Button size="lg" className="w-full text-xl h-auto py-4 px-8 font-bold font-body btn-glow btn-gradient" onClick={scrollToOffer}>
-                                    Quiero escuchar ahora
+                             <div className="pt-4 flex flex-col items-center">
+                                <Button size="lg" className="w-full max-w-sm text-xl h-auto py-4 px-8 font-bold font-body btn-glow btn-gradient-2" onClick={scrollToOffer}>
+                                    QUIERO ESCUCHAR LA MELODÍA
                                 </Button>
+                                <p className="text-xs text-white/70 mt-3 text-center max-w-xs">
+                                    Precio en dólar (USD). Al pagar, la plataforma convierte automaticamente a tu moneda local
+                                </p>
+                                <Image
+                                    src="https://i.postimg.cc/8cJc7W2x/image.png"
+                                    alt="Métodos de pago"
+                                    width={300}
+                                    height={50}
+                                    className="mt-4"
+                                    data-ai-hint="payment methods"
+                                />
                              </div>
                         </div>
 
