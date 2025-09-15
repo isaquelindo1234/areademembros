@@ -4,58 +4,48 @@
 
 @layer base {
   :root {
-    --background: 259 34% 6%; /* Dark Purple */
-    --foreground: 240 5% 96%; /* Soft White (#F1F1F1) */
-    --card: 259 34% 8%;
-    --card-foreground: 240 5% 96%;
-    --popover: 259 34% 6%;
-    --popover-foreground: 240 5% 96%;
-    --primary: 329 100% 60%; /* Vibrant Magenta (#FF2DAF) */
-    --primary-foreground: 0 0% 100%;
+    --background: 224 71% 4%; /* #030710 */
+    --foreground: 210 40% 98%;
+    --card: 224 71% 4%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 336 78% 57%; /* #D81E5B */
+    --primary-foreground: 210 40% 98%;
     --secondary: 48 96% 72%; /* Soft Gold */
     --secondary-foreground: 259 34% 10%;
-    --muted: 259 34% 12%;
-    --muted-foreground: 259 5% 65%;
-    --accent: 329 100% 50%;
-    --accent-foreground: 0 0% 98%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 38 92% 50%; /* #CFC9C0 */
+    --accent-foreground: 222 47% 11%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 259 34% 12%;
-    --input: 259 34% 12%;
-    --ring: 329 100% 60%;
-    --chart-1: 329 77% 48%;
-    --chart-2: 329 77% 58%;
-    --chart-3: 329 77% 68%;
-    --chart-4: 329 77% 78%;
-    --chart-5: 329 77% 88%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 336 78% 57%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 259 34% 6%; /* Dark Purple */
-    --foreground: 240 5% 96%; /* Soft White (#F1F1F1) */
-    --card: 259 34% 8%;
-    --card-foreground: 240 5% 96%;
-    --popover: 259 34% 6%;
-    --popover-foreground: 240 5% 96%;
-    --primary: 329 100% 60%; /* Vibrant Magenta (#FF2DAF) */
-    --primary-foreground: 0 0% 100%;
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+    --card: 224 71% 4%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 336 78% 57%;
+    --primary-foreground: 210 40% 98%;
     --secondary: 48 96% 72%; /* Soft Gold */
     --secondary-foreground: 259 34% 10%;
-    --muted: 259 34% 12%;
-    --muted-foreground: 259 5% 65%;
-    --accent: 329 100% 50%;
-    --accent-foreground: 0 0% 98%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 222 47% 11%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 259 34% 12%;
-    --input: 259 34% 12%;
-    --ring: 329 100% 60%;
-    --chart-1: 329 77% 48%;
-    --chart-2: 329 77% 58%;
-    --chart-3: 329 77% 68%;
-    --chart-4: 329 77% 78%;
-    --chart-5: 329 77% 88%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 336 78% 57%;
   }
 }
 
@@ -71,6 +61,10 @@
 @layer components {
   .glowing-shadow {
     box-shadow: 0 0 15px 0px hsl(var(--primary) / 0.6), 0 0 30px 0px hsl(var(--primary) / 0.4);
+  }
+  
+  .btn-gradient {
+    @apply bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white;
   }
 
   .btn-glow:hover {

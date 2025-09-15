@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Headphones } from "lucide-react";
 
 export function FixedCta() {
   const scrollToOffer = () => {
@@ -15,11 +14,10 @@ export function FixedCta() {
     <div className="fixed-cta">
       <Button
         size="lg"
-        className="w-full text-lg h-16 font-bold font-body btn-glow"
+        className="w-full text-lg h-16 font-bold font-body btn-glow btn-gradient"
         onClick={scrollToOffer}
       >
-        <Headphones className="mr-2 h-6 w-6"/>
-        Escuchar ahora
+        QUERO OUVIR A FREQUÊNCIA
       </Button>
     </div>
   );
