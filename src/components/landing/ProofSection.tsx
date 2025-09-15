@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function ProofSection() {
     const image1 = PlaceHolderImages.find(p => p.id === "testimonial-1");
@@ -17,13 +17,13 @@ export function ProofSection() {
                 <div className="flex flex-col items-center gap-10">
                     {image1 && (
                         <Card className="bg-transparent border-0 shadow-none w-full max-w-md">
-                            <CardContent className="flex aspect-[9/16] items-center justify-center p-0">
+                            <CardContent className="flex aspect-video items-center justify-center p-0">
                                 <Image
                                     src={image1.imageUrl}
                                     alt={`Testimonio 1`}
                                     width={400}
                                     height={711}
-                                    className="rounded-xl object-cover w-full h-full"
+                                    className="rounded-xl object-contain w-full h-auto"
                                     data-ai-hint={image1.imageHint}
                                 />
                             </CardContent>
@@ -32,13 +32,13 @@ export function ProofSection() {
                     
                     {image2 && (
                          <Card className="bg-transparent border-0 shadow-none w-full max-w-md">
-                            <CardContent className="flex aspect-[9/16] items-center justify-center p-0">
+                            <CardContent className="flex aspect-video items-center justify-center p-0">
                                 <Image
                                     src={image2.imageUrl}
                                     alt={`Testimonio 2`}
                                     width={400}
                                     height={711}
-                                    className="rounded-xl object-cover w-full h-full"
+                                    className="rounded-xl object-contain w-full h-auto"
                                     data-ai-hint={image2.imageHint}
                                 />
                             </CardContent>

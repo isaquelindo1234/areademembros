@@ -7,6 +7,7 @@ import { FaqSection } from '@/components/landing/FaqSection';
 import { Footer } from '@/components/landing/Footer';
 import { BenefitSection } from '@/components/landing/BenefitSection';
 import { ParticleBackground } from '@/components/landing/ParticleBackground';
+import { TestimonialSection } from '@/components/landing/TestimonialSection';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="flex-1 z-10">
         <HeroSection />
         <BenefitSection />
+        <TestimonialSection />
         <ProofSection />
         <MethodSection />
         <OfferSection />
