@@ -27,15 +27,17 @@ export function ProofSection() {
                     </Card>
                     
                     <Card className="bg-transparent border-0 shadow-none w-full max-w-md">
-                        <CardContent className="flex aspect-video items-center justify-center p-0">
-                            <Image
-                                src="https://i.postimg.cc/W45QwW5W/image.png"
-                                alt={`Testimonio 2`}
-                                width={400}
-                                height={711}
-                                className="rounded-xl object-contain w-full h-auto"
-                                data-ai-hint="chat message"
-                            />
+                        <CardContent className="p-0">
+                           <div className="aspect-[9/16] w-full">
+                            <iframe 
+                                className="w-full h-full rounded-xl"
+                                src="https://www.youtube.com/embed/p-2kxZGJuVk" 
+                                title="YouTube video player" 
+                                frameBorder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowFullScreen>
+                            </iframe>
+                           </div>
                         </CardContent>
                     </Card>
                 </div>
