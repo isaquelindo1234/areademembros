@@ -24,7 +24,7 @@ export function OfferSection() {
 
                 <div className="max-w-4xl mx-auto bg-gradient-to-br from-white/10 to-transparent border border-primary/50 rounded-2xl p-6 md:p-10 shadow-2xl glowing-shadow">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
-                        <div className="space-y-6 text-center">
+                        <div className="space-y-6 text-center lg:order-first order-last">
                              <div className="space-y-2 text-center">
                                 <p className="text-lg text-white/80 font-body">antes <span className="line-through">$27.00</span></p>
                                 <p className="text-lg text-white/80 font-body">ahora por solo</p>
@@ -39,14 +39,6 @@ export function OfferSection() {
                                 <p className="text-xs text-white/70 mt-3 text-center max-w-xs">
                                     Precio en dólar (USD). Al pagar, la plataforma convierte automaticamente a tu moneda local
                                 </p>
-                                <Image
-                                    src="https://i.postimg.cc/8cJc7W2x/image.png"
-                                    alt="Métodos de pago"
-                                    width={300}
-                                    height={50}
-                                    className="mt-4"
-                                    data-ai-hint="payment methods"
-                                />
                              </div>
                         </div>
 
