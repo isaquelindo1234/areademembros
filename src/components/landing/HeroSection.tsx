@@ -29,10 +29,10 @@ export function HeroSection() {
           <p className="text-xl md:text-2xl font-bold text-primary mb-4 font-headline">
             Él no te ha olvidado… solo necesita sentir tu energía otra vez. Escucha esta frecuencia 5 minutos al día y observa lo que pasa.
           </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-headline font-bold text-white leading-tight mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-headline font-bold text-white leading-tight mb-6">
             en solo 5 minutos por día
           </h1>
-          <p className="text-base md:text-lg text-white/80 font-body max-w-2xl mx-auto leading-relaxed mb-10">
+          <p className="text-base md:text-lg text-white/80 font-body max-w-2xl mx-auto leading-relaxed mb-8">
             Miles de mujeres ya lo probaron… Y muchas recibieron el mensaje que tanto esperaban.
           </p>
 
