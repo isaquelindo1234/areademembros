@@ -1,71 +1,49 @@
 "use client";
 
 import Image from "next/image";
-import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { HeartPulse, Waves } from "lucide-react";
 
 export function HeroSection() {
-  const heroCoupleImage = PlaceHolderImages.find(p => p.id === 'hero-couple');
+  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-audio-icon');
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <div className="relative z-10 container mx-auto px-6 py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-white text-xl md:text-2xl font-semibold font-['Poppins'] leading-10">
-            Quer suas mensagens de enviar por 5 minutos
-          </h2>
-          <h2 className="text-white text-xl md:text-2xl font-semibold font-['Poppins'] leading-10">
-            E faça o seu ex voltar
-          </h2>
-          <h1
-            className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold font-['Poppins'] leading-tight"
-            style={{
-              fontSize: "clamp(2.5rem, 5vw, 54px)",
-              lineHeight: "50px",
-              textShadow: "0px 0px 10px rgba(0,0,0,0.3)",
-              WebkitTextStroke: "1px rgb(0, 0, 0)",
-            }}
-          >
-            correndo para você
+      <div className="relative z-10 container mx-auto px-6 py-20 text-center">
+        <div className="max-w-4xl mx-auto">
+        <Badge variant="secondary" className="mb-6 py-2 px-4 rounded-full text-sm font-body bg-secondary/20 border-secondary/50 text-secondary">
+            +8.000 mujeres ya escucharon
+        </Badge>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-headline font-bold text-white leading-tight mb-6">
+            Haz que él regrese a ti… <br/> en solo <span className="text-primary">5 minutos</span> por día
           </h1>
-
-          <p className="text-muted-foreground text-lg font-light font-['Poppins'] max-w-2xl mx-auto leading-relaxed">
-            Uma estratégia comprovada que desperta o interesse perdido e faz seu
-            ex perceber o que perdeu. Funciona mesmo quando parece impossível.
+          <p className="text-lg md:text-xl text-white/80 font-body max-w-2xl mx-auto leading-relaxed mb-10">
+            Escucha esta frecuencia del amor y activa la energía que ya ayudó a miles de mujeres latinas a reconectar con sus parejas.
           </p>
-          <div className="pt-4">
-            <Button className="bg-[#61CE70] hover:bg-[#4fb85f] text-white font-medium text-sm px-12 py-5 rounded-[28px] font-['Poppins'] shadow-romantic hover:shadow-glow transition-all duration-300 h-auto">
-              QUERO RECONQUISTAR AGORA
-            </Button>
-          </div>
-          <div className="flex items-center justify-center gap-2 pt-6">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-4 h-4 fill-yellow-400 text-yellow-400"
+
+          <div className="relative w-48 h-48 mx-auto mb-8 flex items-center justify-center">
+            {heroImage && (
+                 <Image
+                    src={heroImage.imageUrl}
+                    alt={heroImage.description}
+                    width={180}
+                    height={180}
+                    className="object-contain"
+                    data-ai-hint={heroImage.imageHint}
                 />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="mt-16 relative">
-          <div className="relative max-w-sm mx-auto">
-            {heroCoupleImage && (
-              <Image
-                src={heroCoupleImage.imageUrl}
-                alt={heroCoupleImage.description}
-                width={300}
-                height={450}
-                className="w-full h-auto rounded-2xl shadow-2xl"
-                style={{ width: "32%", margin: "0 auto", display: "block" }}
-                data-ai-hint={heroCoupleImage.imageHint}
-              />
             )}
+            <HeartPulse className="absolute text-primary animate-ping w-24 h-24 opacity-50"/>
+            <Waves className="absolute text-white/20 animate-pulse w-48 h-48"/>
           </div>
+
+          <Button size="lg" className="text-lg h-14 px-10 font-bold font-body btn-glow glowing-shadow">
+            Quiero escuchar la frecuencia
+          </Button>
+
         </div>
       </div>
     </section>

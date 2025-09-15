@@ -2,89 +2,44 @@ import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function TestimonialSection() {
-    const testimonialWoman = PlaceHolderImages.find(p => p.id === 'testimonial-woman');
-    const testimonialMan = PlaceHolderImages.find(p => p.id === 'testimonial-man');
+    const testimonialWoman = PlaceHolderImages.find(p => p.id === 'sad-woman');
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-white/5">
       <div className="container mx-auto px-6">
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          <div className="space-y-6 order-2 lg:order-1">
-            <div className="space-y-6">
-              <p className="text-muted-foreground font-light font-['Poppins'] text-left leading-relaxed">
-                Para você que tem sofrendo, eu sei que você não consegue parar de pensar nele... Eu sei como é... você passa o dia inteiro pensando nele, nas mensagens que vocês trocavam, nos momentos que vocês passaram juntos...
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">
+                Yo sé exactamente cómo te sientes… ¡yo también pasé por eso!
+            </h2>
+            <div className="space-y-4 text-white/80 font-body text-lg leading-relaxed">
+              <p>
+                Esa sensación de vacío, de mirar el celular esperando un mensaje que no llega. La ansiedad de revisar sus redes sociales y ver que está online, pero no habla contigo. Duele, ¿verdad?
               </p>
-              <p className="text-muted-foreground font-light font-['Poppins'] text-left leading-relaxed">
-                Você olha o celular mil vezes esperando uma mensagem dele... verifica o WhatsApp para ver se ele está online... stalka ele nas redes sociais...
+              <p>
+                Yo también sentí mi mundo desmoronarse. Probé de todo: el contacto cero, los consejos de amigas, los rituales complicados… y nada parecía funcionar. Solo me sentía más lejos de él y de mí misma.
               </p>
-              <p className="text-muted-foreground font-light font-['Poppins'] text-left leading-relaxed">
-                Você não consegue se concentrar no trabalho, não consegue dormir direito, não tem vontade de fazer nada... é como se uma parte de você tivesse sido arrancada.
-              </p>
-              <p className="text-muted-foreground font-light font-['Poppins'] text-left leading-relaxed">
-                Eu entendo perfeitamente como você está se sentindo porque eu já passei por isso.
+              <p>
+                Fue en mi punto más bajo que descubrí el poder de las frecuencias vibracionales. Entendí que no se trataba de cambiarlo a él, sino de cambiar mi propia energía para volver a atraerlo de forma natural. Y funcionó.
               </p>
             </div>
           </div>
-          <div className="space-y-6 order-1 lg:order-2">
-            <div className="max-w-md mx-auto lg:ml-0">
+          <div className="flex justify-center">
+             <div className="relative">
                 {testimonialWoman && (
                     <Image
                         src={testimonialWoman.imageUrl}
                         alt={testimonialWoman.description}
                         width={400}
                         height={500}
-                        className="w-full h-auto rounded-2xl shadow-2xl"
-                        style={{width: '85%'}}
+                        className="rounded-2xl shadow-2xl shadow-black/50"
                         data-ai-hint={testimonialWoman.imageHint}
                     />
                 )}
-            </div>
+                <div className="absolute -inset-4 border-2 border-primary/30 rounded-2xl -z-10 animate-pulse"></div>
+             </div>
           </div>
         </div>
-
-        <div className="text-center mb-12">
-            <p className="text-muted-foreground font-light font-['Poppins'] text-lg">Deu tudo certo comigo assim que usei as técnicas. Eu até me lembro...</p>
-            <h3 className="text-white text-2xl font-semibold font-['Poppins'] mt-6 mb-8">
-                Eu sei exatamente como você se sente...<br/>
-                eu já passei por isso!
-            </h3>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-                 <div className="space-y-6">
-                    <p className="text-muted-foreground font-light font-['Poppins'] text-left leading-relaxed">
-                        Há alguns meses, eu estava exatamente na sua posição. Minha namorada havia terminado comigo e eu não sabia o que fazer. Me sentia perdido, rejeitado e com o coração partido.
-                    </p>
-                    <p className="text-muted-foreground font-light font-['Poppins'] text-left leading-relaxed">
-                        Tentei várias estratégias que encontrei na internet, mas nada funcionava. Na verdade, algumas coisas que fiz só pioraram a situação e a afastaram ainda mais de mim.
-                    </p>
-                    <p className="text-muted-foreground font-light font-['Poppins'] text-left leading-relaxed">
-                        Foi então que descobri os segredos que mudaram tudo. Apliquei exatamente o que aprendi e em poucos dias ela começou a demonstrar interesse novamente. Hoje estamos mais unidos que nunca!
-                    </p>
-                    <p className="text-muted-foreground font-light font-['Poppins'] text-left leading-relaxed">
-                        Se funcionou comigo, vai funcionar com você também. Confie no processo.
-                    </p>
-                </div>
-            </div>
-            <div className="space-y-6">
-                <div className="max-w-md mx-auto">
-                    {testimonialMan && (
-                         <Image
-                            src={testimonialMan.imageUrl}
-                            alt={testimonialMan.description}
-                            width={400}
-                            height={500}
-                            className="w-full h-auto rounded-2xl shadow-2xl"
-                            style={{width: '85%'}}
-                            data-ai-hint={testimonialMan.imageHint}
-                        />
-                    )}
-                </div>
-            </div>
-        </div>
-
       </div>
     </section>
   );

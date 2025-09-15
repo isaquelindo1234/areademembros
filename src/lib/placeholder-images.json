@@ -1,34 +1,58 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-couple",
-      "description": "Casal feliz se abraçando",
-      "imageUrl": "https://picsum.photos/seed/herocouple/300/450",
-      "imageHint": "happy couple hug"
+      "id": "hero-audio-icon",
+      "description": "Ícono de audio con ondas de corazón",
+      "imageUrl": "https://picsum.photos/seed/heroicon/180/180",
+      "imageHint": "audio heart"
     },
     {
-      "id": "testimonial-woman",
-      "description": "Mulher feliz",
-      "imageUrl": "https://picsum.photos/seed/testimonialwoman/400/500",
-      "imageHint": "happy woman"
+      "id": "benefit-woman",
+      "description": "Mujer con auriculares y energía a su alrededor",
+      "imageUrl": "https://picsum.photos/seed/benefitwoman/400/500",
+      "imageHint": "woman headphones energy"
     },
     {
-      "id": "testimonial-man",
-      "description": "Homem feliz",
-      "imageUrl": "https://picsum.photos/seed/testimonialman/400/500",
-      "imageHint": "happy man"
+      "id": "sad-woman",
+      "description": "Mujer pensativa o triste",
+      "imageUrl": "https://picsum.photos/seed/sadwoman/400/500",
+      "imageHint": "sad woman"
     },
     {
-      "id": "phone-mockup",
-      "description": "Resultados no celular",
-      "imageUrl": "https://picsum.photos/seed/phonemockup/300/600",
-      "imageHint": "phone chat"
+      "id": "testimonial-1",
+      "description": "Captura de pantalla de testimonio de chat 1",
+      "imageUrl": "https://picsum.photos/seed/testim1/400/600",
+      "imageHint": "chat message"
     },
     {
-        "id": "offer-app",
-        "description": "App Melodia do Amor",
-        "imageUrl": "https://picsum.photos/seed/offerapp/320/640",
-        "imageHint": "love app"
+      "id": "testimonial-2",
+      "description": "Captura de pantalla de testimonio de chat 2",
+      "imageUrl": "https://picsum.photos/seed/testim2/400/600",
+      "imageHint": "chat message"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Captura de pantalla de testimonio de chat 3",
+      "imageUrl": "https://picsum.photos/seed/testim3/400/600",
+      "imageHint": "chat message"
+    },
+    {
+      "id": "testimonial-4",
+      "description": "Captura de pantalla de testimonio de chat 4",
+      "imageUrl": "https://picsum.photos/seed/testim4/400/600",
+      "imageHint": "chat message"
+    },
+    {
+      "id": "tiktok-video",
+      "description": "Miniatura de vídeo estilo TikTok",
+      "imageUrl": "https://picsum.photos/seed/tiktok/320/570",
+      "imageHint": "woman selfie video"
+    },
+    {
+        "id": "offer-box",
+        "description": "Caja del producto Frequencia del Reencuentro",
+        "imageUrl": "https://picsum.photos/seed/offerbox/350/350",
+        "imageHint": "mystical box"
     }
   ]
 }
