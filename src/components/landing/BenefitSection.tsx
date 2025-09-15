@@ -13,7 +13,7 @@ export function BenefitSection() {
             <div className="relative">
                 {benefitImage && (
                     <Image
-                        src={benefitImage.imageUrl}
+                        src="https://i.postimg.cc/W1nRNz6B/Chat-GPT-Image-15-de-set-de-2025-11-47-41.png"
                         alt={benefitImage.description}
                         width={400}
                         height={500}
