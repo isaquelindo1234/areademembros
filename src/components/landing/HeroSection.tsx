@@ -33,7 +33,7 @@ export function HeroSection() {
             en solo 5 minutos por día
           </h1>
           <p className="text-base md:text-lg text-white/80 font-body max-w-2xl mx-auto leading-relaxed mb-10">
-            Escucha esta frecuencia del amor y activa la energía que ya ayudó a miles de mujeres latinas a reconectar con sus parejas.
+            Miles de mujeres ya lo probaron… Y muchas recibieron el mensaje que tanto esperaban.
           </p>
 
           <div className="flex flex-col items-center gap-8">
