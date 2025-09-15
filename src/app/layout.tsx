@@ -23,12 +23,22 @@ export default function RootLayout({
     };
   `;
 
+  const pixelScript = `
+    window.pixelId = "68c8a3759fa18ce3cc7a34c8";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  `;
+
   return (
     <html lang="es" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+        <script dangerouslySetInnerHTML={{ __html: pixelScript }} />
       </head>
       <body className="font-body antialiased bg-background">
         {children}
