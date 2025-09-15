@@ -14,14 +14,14 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-16"
     >
-      <div className="relative z-10 container mx-auto px-4 py-20 text-center">
+      <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
         <Badge variant="secondary" className="mb-6 py-2 px-4 rounded-full text-sm font-body bg-secondary/20 border-secondary/50 text-secondary">
             +8.000 mujeres ya escucharon
         </Badge>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-headline font-bold text-white leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-white leading-tight mb-6">
             Haz que él regrese a ti… <br/> en solo <span className="text-primary">5 minutos</span> por día
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-white/80 font-body max-w-2xl mx-auto leading-relaxed mb-10">
@@ -30,10 +30,11 @@ export function HeroSection() {
 
           <div className="relative w-48 h-48 mx-auto mb-8 flex items-center justify-center">
             <HeartPulse className="absolute text-primary animate-ping w-24 h-24 opacity-50"/>
+            <HeartPulse className="absolute text-primary w-24 h-24"/>
           </div>
 
           <div className="hidden md:block">
-            <Button size="lg" className="text-lg h-14 px-10 font-bold font-body btn-glow glowing-shadow" onClick={scrollToOffer}>
+            <Button size="lg" className="text-xl h-16 px-10 font-bold font-body btn-glow glowing-shadow" onClick={scrollToOffer}>
               Quiero escuchar la frecuencia
             </Button>
           </div>

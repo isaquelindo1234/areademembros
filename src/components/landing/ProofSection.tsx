@@ -20,10 +20,10 @@ export function ProofSection() {
     ];
 
     return (
-        <section className="py-16 md:py-24">
+        <section className="py-8 md:py-16">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-white text-3xl md:text-4xl font-headline font-bold mb-4">
+                <div className="text-center mb-8 md:mb-12">
+                    <h2 className="text-white text-2xl md:text-3xl font-headline font-bold mb-4">
                         Más de 8.000 mujeres ya lo usaron…
                     </h2>
                 </div>
@@ -67,12 +67,12 @@ export function ProofSection() {
                                     alt={videoThumbnail.description}
                                     width={320}
                                     height={570}
-                                    className="rounded-3xl shadow-2xl shadow-primary/20 w-full h-auto"
+                                    className="rounded-2xl shadow-2xl shadow-primary/20 w-full h-auto"
                                     data-ai-hint={videoThumbnail.imageHint}
                                 />
                             )}
-                            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300 rounded-3xl flex items-center justify-center">
-                                <PlayCircle className="w-16 h-16 md:w-20 md:h-20 text-white/80 group-hover:text-white group-hover:scale-110 transition-transform duration-300"/>
+                            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300 rounded-2xl flex items-center justify-center">
+                                <PlayCircle className="w-16 h-16 text-white/80 group-hover:text-white group-hover:scale-110 transition-transform duration-300"/>
                             </div>
                         </div>
                     </div>

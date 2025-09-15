@@ -5,14 +5,14 @@ export function TestimonialSection() {
     const testimonialWoman = PlaceHolderImages.find(p => p.id === 'sad-woman');
 
   return (
-    <section className="py-16 md:py-24 bg-white/5">
+    <section className="py-8 md:py-16 bg-white/5">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-white">
+            <h2 className="text-2xl md:text-3xl font-headline font-bold text-white">
                 Yo sé exactamente cómo te sientes… ¡yo también pasé por eso!
             </h2>
-            <div className="space-y-4 text-white/80 font-body text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <div className="space-y-4 text-white/80 font-body text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
               <p>
                 Esa sensación de vacío, de mirar el celular esperando un mensaje que no llega. La ansiedad de revisar sus redes sociales y ver que está online, pero no habla contigo. Duele, ¿verdad?
               </p>
@@ -32,7 +32,7 @@ export function TestimonialSection() {
                         alt={testimonialWoman.description}
                         width={400}
                         height={500}
-                        className="rounded-2xl shadow-2xl shadow-black/50 w-full max-w-sm h-auto"
+                        className="rounded-xl shadow-2xl shadow-black/50 w-full max-w-sm h-auto object-cover"
                         data-ai-hint={testimonialWoman.imageHint}
                     />
                 )}

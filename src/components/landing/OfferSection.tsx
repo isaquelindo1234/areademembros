@@ -24,21 +24,21 @@ export function OfferSection() {
       }
 
     return (
-        <section id="offer" className="py-16 md:py-24">
+        <section id="offer" className="py-8 md:py-16">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                     <h2 className="text-white text-3xl md:text-4xl font-headline font-bold">
+                <div className="text-center mb-8 md:mb-12">
+                     <h2 className="text-white text-2xl md:text-3xl font-headline font-bold">
                         Por tiempo limitado…
                     </h2>
                 </div>
 
-                <div className="max-w-4xl mx-auto bg-gradient-to-br from-white/10 to-transparent border border-primary/50 rounded-3xl p-6 md:p-12 shadow-2xl glowing-shadow">
-                    <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div className="max-w-4xl mx-auto bg-gradient-to-br from-white/10 to-transparent border border-primary/50 rounded-2xl p-6 md:p-10 shadow-2xl glowing-shadow">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center">
                         <div className="space-y-6 text-center lg:text-left">
                              <div className="space-y-4">
-                                <p className="text-lg md:text-xl text-white/80 font-body">Acceso completo por un pago único de:</p>
-                                <div className="text-6xl md:text-7xl font-headline font-bold text-white">
-                                    <span className="line-through text-3xl md:text-4xl text-white/50 mr-2">$37</span>$9
+                                <p className="text-lg text-white/80 font-body">Acceso completo por un pago único de:</p>
+                                <div className="text-5xl md:text-6xl font-headline font-bold text-white">
+                                    <span className="line-through text-2xl md:text-3xl text-white/50 mr-2">$37</span>$9
                                 </div>
                                 <p className="text-secondary font-body font-semibold">¡Oferta especial por lanzamiento!</p>
                              </div>
@@ -51,7 +51,7 @@ export function OfferSection() {
                                 ))}
                              </ul>
                              <div className="pt-4 hidden md:block">
-                                <Button size="lg" className="w-full text-xl h-16 px-10 font-bold font-body btn-glow" onClick={scrollToOffer}>
+                                <Button size="lg" className="w-full text-xl h-auto py-4 px-8 font-bold font-body btn-glow" onClick={scrollToOffer}>
                                     Quiero escuchar ahora
                                 </Button>
                              </div>
@@ -64,7 +64,7 @@ export function OfferSection() {
                                     alt={offerImage.description}
                                     width={350}
                                     height={350}
-                                    className="object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] w-full max-w-xs h-auto"
+                                    className="object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] w-full max-w-xs h-auto rounded-xl"
                                     data-ai-hint={offerImage.imageHint}
                                 />
                             )}

@@ -2,21 +2,21 @@ import { ShieldCheck } from "lucide-react";
 
 export function GuaranteeSection() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-8 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-6 md:p-12 shadow-2xl shadow-primary/10">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-6 md:p-10 shadow-2xl shadow-primary/10">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="flex justify-center">
               <div className="relative text-center">
-                <ShieldCheck className="w-24 h-24 md:w-32 md:h-32 text-secondary mx-auto drop-shadow-[0_0_15px_hsl(var(--secondary))]"/>
-                <h2 className="text-5xl md:text-6xl font-headline font-bold text-white mt-4">30 DÍAS</h2>
-                <p className="text-xl md:text-2xl font-headline text-white">DE GARANTÍA</p>
+                <ShieldCheck className="w-24 h-24 md:w-28 md:h-28 text-secondary mx-auto drop-shadow-[0_0_15px_hsl(var(--secondary))]"/>
+                <h2 className="text-4xl md:text-5xl font-headline font-bold text-white mt-4">30 DÍAS</h2>
+                <p className="text-lg md:text-xl font-headline text-white">DE GARANTÍA</p>
                 <div className="absolute -inset-8 bg-secondary/20 rounded-full blur-3xl -z-10"></div>
               </div>
             </div>
 
-            <div className="space-y-4 md:space-y-6 text-center md:text-left">
-              <h3 className="text-white text-2xl md:text-3xl font-headline font-bold">
+            <div className="space-y-4 text-center md:text-left">
+              <h3 className="text-white text-xl md:text-2xl font-headline font-bold">
                 Tu Reencuentro o Tu Dinero de Vuelta
               </h3>
               <div className="space-y-4 text-muted-foreground font-body leading-relaxed text-base">
