@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Sparkles } from "lucide-react";
 
 export function BenefitSection() {
@@ -8,7 +7,7 @@ export function BenefitSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center">
             <div className="relative">
-              <Image
+              <img
                 src="https://i.postimg.cc/rFZWvC73/Chat-GPT-Image-15-de-set-de-2025-11-47-41-removebg-preview.png"
                 alt="Caja del producto Frequencia del Reencuentro"
                 width={500}

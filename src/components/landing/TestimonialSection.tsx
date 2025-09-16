@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export function TestimonialSection() {
 
   return (
@@ -14,7 +12,7 @@ export function TestimonialSection() {
           
           <div className="flex justify-center">
              <div className="relative">
-                <Image
+                <img
                     src="https://i.postimg.cc/BZLNTfCL/Design-sem-nome-19.png"
                     alt="Depoimento de uma cliente"
                     width={400}

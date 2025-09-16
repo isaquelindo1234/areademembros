@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "../ui/button";
 
@@ -44,7 +43,7 @@ export function InfoSection() {
           </div>
           <div className="flex justify-center">
             {womanImage && (
-                <Image
+                <img
                 src={womanImage.imageUrl}
                 alt={womanImage.description}
                 width={400}

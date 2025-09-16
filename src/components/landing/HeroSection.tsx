@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Star, Headphones } from "lucide-react";
 
@@ -50,13 +49,13 @@ export function HeroSection() {
             <div className="flex items-center gap-3 pt-2">
               <div className="flex -space-x-2">
                 {avatars.map((avatar, index) => (
-                  <Image 
+                  <img 
                     key={index}
                     src={avatar}
                     alt={`Avatar ${index + 1}`}
                     width={36}
                     height={36}
-                    className="rounded-full border-2 border-background"
+                    className="rounded-full border-2 border-background object-cover"
                   />
                 ))}
               </div>
@@ -76,5 +75,3 @@ export function HeroSection() {
     </section>
   );
 }
-
-    

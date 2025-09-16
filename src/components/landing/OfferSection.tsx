@@ -1,7 +1,6 @@
 "use client";
 
 import { Music2 } from "lucide-react";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 
 const CheckoutButton = dynamic(() => import('@/components/landing/CheckoutButton').then(mod => mod.CheckoutButton), { ssr: false });
@@ -58,9 +57,9 @@ export function OfferSection() {
               </ul>
             </div>
 
-            {/* Product Image */}
+            {/* Product img */}
             <div className="mt-10 flex justify-center">
-              <Image
+              <img
                 src="https://i.postimg.cc/rw6Pkdn9/Whisk-2efa6b0579898fc85bd4a2d03adb581fdr-removebg-preview.png"
                 alt="Caja del producto"
                 width={350}

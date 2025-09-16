@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function ProofSection() {
@@ -14,7 +13,7 @@ export function ProofSection() {
                 <div className="flex flex-col items-center gap-10">
                     <Card className="bg-transparent border-0 shadow-none w-full max-w-md">
                         <CardContent className="flex items-center justify-center p-0">
-                            <Image
+                            <img
                                 src="https://i.postimg.cc/26sMgFkD/image.png"
                                 alt={`Testimonio 1`}
                                 width={400}
@@ -27,7 +26,7 @@ export function ProofSection() {
 
                     <Card className="bg-transparent border-0 shadow-none w-full max-w-md">
                         <CardContent className="flex items-center justify-center p-0">
-                            <Image
+                            <img
                                 src="https://i.postimg.cc/W45QwW5W/image.png"
                                 alt={`Testimonio 2`}
                                 width={400}

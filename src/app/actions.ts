@@ -1,6 +1,6 @@
 "use server";
 
-import { generatePersonalizedMelody } from "@/ai/flows/generate-personalized-melody";
+// import { generatePersonalizedMelody } from "@/ai/flows/generate-personalized-melody";
 
 type ActionResult = {
   message: string;
@@ -21,13 +21,14 @@ export async function createMelodyAction(
   }
 
   try {
-    const result = await generatePersonalizedMelody(prompt);
-    if (!result.media) {
-      throw new Error("The AI did not return a melody.");
-    }
+    // const result = await generatePersonalizedMelody(prompt);
+    // if (!result.media) {
+    //   throw new Error("The AI did not return a melody.");
+    // }
     return {
       message: "Your personalized melody is ready!",
-      audioUrl: result.media,
+      // audioUrl: result.media,
+      audioUrl: null
     };
   } catch (error) {
     console.error(error);
