@@ -1,8 +1,10 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Music2 } from "lucide-react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const CheckoutButton = dynamic(() => import('@/components/landing/CheckoutButton').then(mod => mod.CheckoutButton), { ssr: false });
 
 export function OfferSection() {
   const deliverables = [
@@ -36,18 +38,7 @@ export function OfferSection() {
                 </div>
               </div>
               <div className="pt-4 flex flex-col items-center">
-                <a 
-                  href="https://pay.hotmart.com/E101916835T?off=h7rlii2k&checkoutMode=10" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-full max-w-[320px] mx-auto block my-5"
-                >
-                  <Button 
-                    className="w-full text-base h-auto py-4 px-6 font-bold font-body btn-glow btn-gradient-2 rounded-full"
-                  >
-                    QUIERO ESCUCHAR LA MELODÍA
-                  </Button>
-                </a>
+                <CheckoutButton />
                 <p className="text-xs text-white/70 mt-3 text-center max-w-xs">
                   Precio en dólar (USD). Al pagar, la plataforma convierte automaticamente a tu moneda local
                 </p>
