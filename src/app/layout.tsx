@@ -24,22 +24,22 @@ export default function RootLayout({
     };
   `;
 
-  const pixelScript = `
-    window.pixelId = "68d4384396d6eb6fca9c6acc";
-    var a = document.createElement("script");
-    a.setAttribute("async", "");
-    a.setAttribute("defer", "");
-    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-    document.head.appendChild(a);
-  `;
-
   return (
     <html lang="es" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-        <script dangerouslySetInnerHTML={{ __html: pixelScript }} />
+        <Script id="utmify-pixel-config" strategy="afterInteractive">
+          {`window.pixelId = "68d4384396d6eb6fca9c6acc";`}
+        </Script>
+        <Script
+          id="utmify-pixel-script"
+          src="https://cdn.utmify.com.br/scripts/pixel/pixel.js"
+          strategy="afterInteractive"
+          async
+          defer
+        />
       </head>
       <body className="font-body antialiased bg-background">
         {children}
