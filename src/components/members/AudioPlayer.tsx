@@ -62,7 +62,6 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
     if (event.data === 0) { // ended
       setIsPlaying(false);
       setCurrentTime(0);
-      // Don't auto-replay, just reset state
       if (playerRef.current) {
         playerRef.current.seekTo(0);
         playerRef.current.pauseVideo();
@@ -127,8 +126,8 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
             <h2 className="text-2xl md:text-3xl font-headline font-bold text-white mb-3">{title}</h2>
             <p className="text-white/70 font-body mb-6 max-w-xl mx-auto">{description}</p>
             
-            {videoId && (
-              <div className={`aspect-video mb-4 rounded-lg overflow-hidden ${isPlaying ? 'block' : 'hidden'}`}>
+            <div className={`aspect-video mb-4 rounded-lg overflow-hidden ${isPlaying ? 'block' : 'hidden'}`}>
+              {videoId && (
                   <YouTube
                       videoId={videoId}
                       opts={{ width: '100%', height: '100%' }}
@@ -136,8 +135,8 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
                       onStateChange={onPlayerStateChange}
                       className="w-full h-full"
                   />
-              </div>
-            )}
+              )}
+            </div>
 
             <div className="flex flex-col items-center">
                 {!isPlaying && (
@@ -168,17 +167,15 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
           <h3 className="text-lg font-headline font-bold text-white mb-2 flex-grow">{title}</h3>
           <p className="text-white/60 font-body text-sm mb-4 flex-grow">{description}</p>
 
-          {videoId && isPlaying && (
-            <div className={`aspect-video mb-4 rounded-lg overflow-hidden`}>
-                <YouTube
-                    videoId={videoId}
-                    opts={{ width: '100%', height: '100%' }}
-                    onReady={onPlayerReady}
-                    onStateChange={onPlayerStateChange}
-                    className="w-full h-full"
-                />
-            </div>
-          )}
+          <div className={`aspect-video mb-4 rounded-lg overflow-hidden ${isPlaying ? 'block' : 'hidden'}`}>
+            <YouTube
+                videoId={videoId}
+                opts={{ width: '100%', height: '100%' }}
+                onReady={onPlayerReady}
+                onStateChange={onPlayerStateChange}
+                className="w-full h-full"
+            />
+          </div>
           
           <div className="flex items-center gap-4 mt-auto">
               <button 
