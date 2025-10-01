@@ -5,7 +5,7 @@ export function LockedSection() {
   return (
     <section className="my-10 md:my-16">
       <a 
-        href="#" // TODO: Substitua pelo seu link de checkout
+        href="https://pay.mundpay.com/0199a136-f2a6-7298-925a-1ce5050ef70e?ref="
         className="block group"
       >
         <div className="relative max-w-3xl mx-auto bg-gradient-to-br from-secondary/10 to-transparent border border-secondary/50 rounded-2xl p-6 md:p-10 text-center shadow-2xl shadow-secondary/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-secondary/20">
