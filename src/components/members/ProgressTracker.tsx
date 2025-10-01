@@ -21,7 +21,7 @@ export function ProgressTracker({ frequencies }: ProgressTrackerProps) {
   return (
     <section className="my-10 md:my-16">
       <div className="max-w-2xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-6">
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
             <h3 className="text-lg font-headline font-bold text-white">Tu Progreso</h3>
             <span className="text-sm font-body text-white/70 font-semibold">{playedCount} de {frequencies.length} escuchadas</span>
         </div>
@@ -33,7 +33,7 @@ export function ProgressTracker({ frequencies }: ProgressTrackerProps) {
               ) : (
                 <Circle className="w-5 h-5 text-white/30 flex-shrink-0" />
               )}
-              <span className={`font-body ${index < playedCount ? 'opacity-70 line-through' : 'font-medium'}`}>
+              <span className={`font-body text-sm ${index < playedCount ? 'opacity-70 line-through' : 'font-medium'}`}>
                 {freq.title.split(': ')[1] || freq.title}
               </span>
             </div>

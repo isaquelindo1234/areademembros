@@ -139,13 +139,21 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
             </div>
 
             <div className="flex flex-col items-center">
-                {!isPlaying && (
+                {!isPlaying ? (
                   <button 
                       onClick={togglePlayPause} 
                       className="mb-4 text-primary hover:text-white transition-colors duration-300 transform hover:scale-105"
                       aria-label="Escuchar ahora"
                   >
                       <PlayCircle size={64} />
+                  </button>
+                ) : (
+                  <button 
+                      onClick={togglePlayPause} 
+                      className="mb-4 text-primary hover:text-white transition-colors duration-300 transform hover:scale-105"
+                      aria-label="Pausar"
+                  >
+                      <PauseCircle size={64} />
                   </button>
                 )}
                 <div className="w-full max-w-md bg-white/10 rounded-full h-2.5">
