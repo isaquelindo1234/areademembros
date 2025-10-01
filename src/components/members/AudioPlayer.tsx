@@ -1,0 +1,115 @@
+
+'use client';
+
+import { PlayCircle, PauseCircle } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
+
+type AudioPlayerProps = {
+  title: string;
+  description: string;
+  audioSrc: string;
+  isMain?: boolean;
+};
+
+export function AudioPlayer({ title, description, audioSrc, isMain = false }: AudioPlayerProps) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const togglePlayPause = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const setAudioData = () => {
+      setDuration(audio.duration);
+      setCurrentTime(audio.currentTime);
+    };
+
+    const setAudioTime = () => setCurrentTime(audio.currentTime);
+
+    audio.addEventListener('loadeddata', setAudioData);
+    audio.addEventListener('timeupdate', setAudioTime);
+    audio.addEventListener('ended', () => setIsPlaying(false));
+
+    return () => {
+      audio.removeEventListener('loadeddata', setAudioData);
+      audio.removeEventListener('timeupdate', setAudioTime);
+      audio.removeEventListener('ended', () => setIsPlaying(false));
+    };
+  }, []);
+
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  };
+
+  const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
+
+  if (isMain) {
+    return (
+        <div className="bg-gradient-to-br from-white/10 to-transparent border border-primary/50 rounded-2xl p-6 md:p-8 shadow-2xl glowing-shadow text-center">
+            <h2 className="text-2xl md:text-3xl font-headline font-bold text-white mb-3">{title}</h2>
+            <p className="text-white/70 font-body mb-6 max-w-xl mx-auto">{description}</p>
+            <audio ref={audioRef} src={audioSrc} preload="metadata" className="hidden"></audio>
+            
+            <div className="flex flex-col items-center">
+                <button 
+                    onClick={togglePlayPause} 
+                    className="mb-4 text-primary hover:text-white transition-colors duration-300 transform hover:scale-105"
+                    aria-label="Escuchar ahora"
+                >
+                    {isPlaying ? <PauseCircle size={64} /> : <PlayCircle size={64} />}
+                </button>
+                <div className="w-full max-w-md bg-white/10 rounded-full h-2.5">
+                    <div className="bg-primary h-2.5 rounded-full" style={{ width: `${progress}%` }}></div>
+                </div>
+                <div className="text-xs text-white/50 mt-2 w-full max-w-md flex justify-between">
+                    <span>{formatTime(currentTime)}</span>
+                    <span>{formatTime(duration)}</span>
+                </div>
+            </div>
+        </div>
+    );
+  }
+
+  return (
+    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-left flex flex-col h-full transform transition-transform duration-300 hover:-translate-y-2 hover:border-primary/50">
+        <h3 className="text-lg font-headline font-bold text-white mb-2 flex-grow">{title}</h3>
+        <p className="text-white/60 font-body text-sm mb-4 flex-grow">{description}</p>
+        <audio ref={audioRef} src={audioSrc} preload="metadata" className="hidden"></audio>
+        
+        <div className="flex items-center gap-4 mt-auto">
+            <button 
+                onClick={togglePlayPause} 
+                className="text-primary hover:text-white transition-colors"
+                aria-label="Play/Pause"
+            >
+                {isPlaying ? <PauseCircle size={40} /> : <PlayCircle size={40} />}
+            </button>
+            <div className="w-full">
+                <div className="w-full bg-white/10 rounded-full h-1.5">
+                    <div className="bg-primary h-1.5 rounded-full" style={{ width: `${progress}%` }}></div>
+                </div>
+                <div className="text-xs text-white/50 mt-1 flex justify-between">
+                    <span>{formatTime(currentTime)}</span>
+                    <span>{formatTime(duration)}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  );
+}
