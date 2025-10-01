@@ -18,13 +18,13 @@ export function LockedSection() {
           </div>
 
           <h3 className="text-xl md:text-2xl font-headline font-bold text-white mb-2">
-            ✨ Oferta Exclusiva: Desbloqueie o Próximo Nível
+            ✨ Oferta Exclusiva: Desbloquea el Siguiente Nivel
           </h3>
           <p className="text-white/70 font-body max-w-xl mx-auto text-sm md:text-base mb-4">
-            Descubra a <span className="font-bold text-secondary">Frequência Secreta</span> e o <span className="font-bold text-secondary">Guia Infalível</span> para conquistar a atenção de qualquer pessoa que você desejar.
+            Descubre la <span className="font-bold text-secondary">Frecuencia Secreta</span> y la <span className="font-bold text-secondary">Guía Infalible</span> para conquistar la atención de cualquier persona que desees.
           </p>
           <span className="inline-block bg-secondary/20 text-secondary font-bold text-sm px-4 py-2 rounded-full border border-secondary/50 group-hover:bg-secondary/30 transition-colors">
-            Eu quero desbloquear agora!
+            ¡Quiero desbloquearlo ahora!
           </span>
         </div>
       </a>
