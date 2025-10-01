@@ -18,7 +18,7 @@ export const bonusFrequencies: Frequency[] = [
         id: 'bonus-1',
         title: '💕 Atracción de la pareja ideal',
         description: 'Abre tus caminos para atraer a la persona que deseas.',
-        audioSrc: 'https://youtu.be/zL8fgMMwoV4',
+        audioSrc: 'https://youtu.be/jZR3p4o41GE',
     },
     {
         id: 'bonus-2',
