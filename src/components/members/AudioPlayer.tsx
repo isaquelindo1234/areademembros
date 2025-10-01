@@ -21,7 +21,7 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
   const playerRef = useRef<YouTubePlayer | null>(null);
 
   const getYoutubeVideoId = (url: string) => {
-    if (!url.includes('youtu')) return null;
+    if (!url || !url.includes('youtu')) return null;
     const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
     const matches = url.match(regex);
     return matches ? matches[1] : null;
@@ -30,7 +30,7 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
   const videoId = isMain ? '_kVeHPLHudo' : getYoutubeVideoId(audioSrc);
 
   const togglePlayPause = () => {
-    if (isMain && playerRef.current) {
+    if (videoId && playerRef.current) {
       const playerState = playerRef.current.getPlayerState();
       if (playerState === 1) { // playing
         playerRef.current.pauseVideo();
@@ -64,7 +64,6 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
       setCurrentTime(0);
       event.target.seekTo(0);
       event.target.pauseVideo();
-
     }
     if (event.data === 1) { // playing
         setIsPlaying(true);
@@ -76,7 +75,7 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
-    if (isMain && isPlaying) {
+    if (videoId && isPlaying) {
       interval = setInterval(() => {
         if(playerRef.current) {
             setCurrentTime(playerRef.current.getCurrentTime());
@@ -84,7 +83,7 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
       }, 1000);
     }
     return () => clearInterval(interval);
-  }, [isMain, isPlaying]);
+  }, [videoId, isPlaying]);
 
 
   useEffect(() => {
@@ -143,7 +142,7 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
                       className="mb-4 text-primary hover:text-white transition-colors duration-300 transform hover:scale-105"
                       aria-label="Escuchar ahora"
                   >
-                      {isPlaying ? <PauseCircle size={64} /> : <PlayCircle size={64} />}
+                      <PlayCircle size={64} />
                   </button>
                 )}
                 <div className="w-full max-w-md bg-white/10 rounded-full h-2.5">
@@ -158,6 +157,59 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
     );
   }
 
+  // Bonus Frequencies
+  if (videoId) {
+    return (
+      <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-left flex flex-col h-full transform transition-transform duration-300 hover:-translate-y-2 hover:border-primary/50">
+          <h3 className="text-lg font-headline font-bold text-white mb-2 flex-grow">{title}</h3>
+          <p className="text-white/60 font-body text-sm mb-4 flex-grow">{description}</p>
+
+          {videoId && isPlaying && (
+            <div className={`aspect-video mb-4`}>
+                <YouTube
+                    videoId={videoId}
+                    opts={{ width: '100%', height: '100%' }}
+                    onReady={onPlayerReady}
+                    onStateChange={onPlayerStateChange}
+                    className="w-full h-full rounded-lg overflow-hidden"
+                />
+            </div>
+          )}
+          
+          <div className="flex items-center gap-4 mt-auto">
+              {!isPlaying && (
+                <button 
+                    onClick={togglePlayPause} 
+                    className="text-primary hover:text-white transition-colors"
+                    aria-label="Play/Pause"
+                >
+                    <PlayCircle size={40} />
+                </button>
+              )}
+              {isPlaying && (
+                 <button 
+                    onClick={togglePlayPause} 
+                    className="text-primary hover:text-white transition-colors"
+                    aria-label="Play/Pause"
+                >
+                    <PauseCircle size={40} />
+                </button>
+              )}
+              <div className="w-full">
+                  <div className="w-full bg-white/10 rounded-full h-1.5">
+                      <div className="bg-primary h-1.5 rounded-full" style={{ width: `${progress}%` }}></div>
+                  </div>
+                  <div className="text-xs text-white/50 mt-1 flex justify-between">
+                      <span>{formatTime(currentTime)}</span>
+                      <span>{formatTime(duration)}</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+    );
+  }
+
+  // Fallback for non-youtube audio
   return (
     <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-left flex flex-col h-full transform transition-transform duration-300 hover:-translate-y-2 hover:border-primary/50">
         <h3 className="text-lg font-headline font-bold text-white mb-2 flex-grow">{title}</h3>
