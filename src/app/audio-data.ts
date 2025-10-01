@@ -42,6 +42,6 @@ export const bonusFrequencies: Frequency[] = [
         id: 'bonus-5',
         title: '🌙 Neutralizar emociones negativas',
         description: 'Limpia los bloqueos y las energías negativas que afectan la relación.',
-        audioSrc: 'https://firebasestorage.googleapis.com/v0/b/your-project-id/o/bonus_5.mp3?alt=media',
+        audioSrc: 'https://youtu.be/WrJjlayxYfc',
     },
 ];
