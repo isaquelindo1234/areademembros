@@ -36,7 +36,7 @@ export const bonusFrequencies: Frequency[] = [
         id: 'bonus-4',
         title: '✨ Encantamiento: solo tendrá ojos para ti',
         description: 'Potencia tu magnetismo personal y centra su atención en ti.',
-        audioSrc: 'https://firebasestorage.googleapis.com/v0/b/your-project-id/o/bonus_4.mp3?alt=media',
+        audioSrc: 'https://youtu.be/Nw47qP8pUT4',
     },
     {
         id: 'bonus-5',
