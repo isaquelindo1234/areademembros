@@ -24,7 +24,7 @@ export const bonusFrequencies: Frequency[] = [
         id: 'bonus-2',
         title: '💫 Reconciliación amorosa',
         description: 'Armoniza las energías para facilitar el perdón y la unión.',
-        audioSrc: 'https://firebasestorage.googleapis.com/v0/b/your-project-id/o/bonus_2.mp3?alt=media',
+        audioSrc: 'https://youtu.be/6CC8viYsUk0',
     },
     {
         id: 'bonus-3',
