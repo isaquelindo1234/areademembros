@@ -3,6 +3,8 @@
 
 import { PlayCircle, PauseCircle } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
+import YouTube from 'react-youtube';
+import type { YouTubePlayer } from 'react-youtube';
 
 type AudioPlayerProps = {
   title: string;
@@ -16,8 +18,30 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const playerRef = useRef<YouTubePlayer | null>(null);
+
+  const getYoutubeVideoId = (url: string) => {
+    if (!url.includes('youtu')) return null;
+    const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+    const matches = url.match(regex);
+    return matches ? matches[1] : null;
+  };
+
+  const videoId = isMain ? '_kVeHPLHudo' : getYoutubeVideoId(audioSrc);
 
   const togglePlayPause = () => {
+    if (isMain && playerRef.current) {
+      const playerState = playerRef.current.getPlayerState();
+      if (playerState === 1) { // playing
+        playerRef.current.pauseVideo();
+        setIsPlaying(false);
+      } else {
+        playerRef.current.playVideo();
+        setIsPlaying(true);
+      }
+      return;
+    }
+
     const audio = audioRef.current;
     if (!audio) return;
 
@@ -28,6 +52,40 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
     }
     setIsPlaying(!isPlaying);
   };
+  
+  const onPlayerReady = (event: { target: YouTubePlayer }) => {
+    playerRef.current = event.target;
+    setDuration(event.target.getDuration());
+  };
+
+  const onPlayerStateChange = (event: { data: number, target: YouTubePlayer }) => {
+    if (event.data === 0) { // ended
+      setIsPlaying(false);
+      setCurrentTime(0);
+      event.target.seekTo(0);
+      event.target.pauseVideo();
+
+    }
+    if (event.data === 1) { // playing
+        setIsPlaying(true);
+    }
+    if (event.data === 2) { // paused
+        setIsPlaying(false);
+    }
+  };
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (isMain && isPlaying) {
+      interval = setInterval(() => {
+        if(playerRef.current) {
+            setCurrentTime(playerRef.current.getCurrentTime());
+        }
+      }, 1000);
+    }
+    return () => clearInterval(interval);
+  }, [isMain, isPlaying]);
+
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -52,6 +110,7 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
   }, []);
 
   const formatTime = (time: number) => {
+    if (isNaN(time) || time === 0) return '0:00';
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
@@ -64,8 +123,18 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
         <div className="bg-gradient-to-br from-white/10 to-transparent border border-primary/50 rounded-2xl p-6 md:p-8 shadow-2xl glowing-shadow text-center">
             <h2 className="text-2xl md:text-3xl font-headline font-bold text-white mb-3">{title}</h2>
             <p className="text-white/70 font-body mb-6 max-w-xl mx-auto">{description}</p>
-            <audio ref={audioRef} src={audioSrc} preload="metadata" className="hidden"></audio>
             
+            {videoId && (
+              <div className="hidden">
+                  <YouTube
+                      videoId={videoId}
+                      opts={{ height: '0', width: '0' }}
+                      onReady={onPlayerReady}
+                      onStateChange={onPlayerStateChange}
+                  />
+              </div>
+            )}
+
             <div className="flex flex-col items-center">
                 <button 
                     onClick={togglePlayPause} 
