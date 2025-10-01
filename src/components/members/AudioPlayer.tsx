@@ -62,8 +62,11 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
     if (event.data === 0) { // ended
       setIsPlaying(false);
       setCurrentTime(0);
-      event.target.seekTo(0);
-      event.target.pauseVideo();
+      // Don't auto-replay, just reset state
+      if (playerRef.current) {
+        playerRef.current.seekTo(0);
+        playerRef.current.pauseVideo();
+      }
     }
     if (event.data === 1) { // playing
         setIsPlaying(true);
@@ -78,7 +81,8 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
     if (videoId && isPlaying) {
       interval = setInterval(() => {
         if(playerRef.current) {
-            setCurrentTime(playerRef.current.getCurrentTime());
+            const time = playerRef.current.getCurrentTime();
+            setCurrentTime(time);
         }
       }, 1000);
     }
@@ -124,13 +128,13 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
             <p className="text-white/70 font-body mb-6 max-w-xl mx-auto">{description}</p>
             
             {videoId && (
-              <div className={`aspect-video mb-4 ${isPlaying ? 'block' : 'hidden'}`}>
+              <div className={`aspect-video mb-4 rounded-lg overflow-hidden ${isPlaying ? 'block' : 'hidden'}`}>
                   <YouTube
                       videoId={videoId}
                       opts={{ width: '100%', height: '100%' }}
                       onReady={onPlayerReady}
                       onStateChange={onPlayerStateChange}
-                      className="w-full h-full rounded-lg overflow-hidden"
+                      className="w-full h-full"
                   />
               </div>
             )}
@@ -165,36 +169,25 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
           <p className="text-white/60 font-body text-sm mb-4 flex-grow">{description}</p>
 
           {videoId && isPlaying && (
-            <div className={`aspect-video mb-4`}>
+            <div className={`aspect-video mb-4 rounded-lg overflow-hidden`}>
                 <YouTube
                     videoId={videoId}
                     opts={{ width: '100%', height: '100%' }}
                     onReady={onPlayerReady}
                     onStateChange={onPlayerStateChange}
-                    className="w-full h-full rounded-lg overflow-hidden"
+                    className="w-full h-full"
                 />
             </div>
           )}
           
           <div className="flex items-center gap-4 mt-auto">
-              {!isPlaying && (
-                <button 
-                    onClick={togglePlayPause} 
-                    className="text-primary hover:text-white transition-colors"
-                    aria-label="Play/Pause"
-                >
-                    <PlayCircle size={40} />
-                </button>
-              )}
-              {isPlaying && (
-                 <button 
-                    onClick={togglePlayPause} 
-                    className="text-primary hover:text-white transition-colors"
-                    aria-label="Play/Pause"
-                >
-                    <PauseCircle size={40} />
-                </button>
-              )}
+              <button 
+                  onClick={togglePlayPause} 
+                  className="text-primary hover:text-white transition-colors"
+                  aria-label="Play/Pause"
+              >
+                  {isPlaying ? <PauseCircle size={40} /> : <PlayCircle size={40} />}
+              </button>
               <div className="w-full">
                   <div className="w-full bg-white/10 rounded-full h-1.5">
                       <div className="bg-primary h-1.5 rounded-full" style={{ width: `${progress}%` }}></div>
