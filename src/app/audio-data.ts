@@ -30,7 +30,7 @@ export const bonusFrequencies: Frequency[] = [
         id: 'bonus-3',
         title: '🔒 Restaurar la confianza',
         description: 'Sana las heridas del pasado y reconstruye la confianza mutua.',
-        audioSrc: 'https://firebasestorage.googleapis.com/v0/b/your-project-id/o/bonus_3.mp3?alt=media',
+        audioSrc: 'https://youtu.be/GsyPJxOlHQw',
     },
     {
         id: 'bonus-4',
