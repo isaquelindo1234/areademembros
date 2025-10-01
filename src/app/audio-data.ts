@@ -9,7 +9,7 @@ export type Frequency = {
 export const mainFrequency: Frequency = {
     id: 'main-pulse',
     title: '💓 Frecuencia Principal: Pulso del Amor',
-    description: 'Usa esta melodía para reconectar energéticamente con tu persona especial.',
+    description: 'Activa tu magnetismo para que él piense en ti sin parar…',
     audioSrc: 'https://firebasestorage.googleapis.com/v0/b/your-project-id/o/main_frequency.mp3?alt=media',
 };
   
