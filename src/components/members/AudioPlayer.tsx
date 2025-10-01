@@ -125,24 +125,27 @@ export function AudioPlayer({ title, description, audioSrc, isMain = false }: Au
             <p className="text-white/70 font-body mb-6 max-w-xl mx-auto">{description}</p>
             
             {videoId && (
-              <div className="hidden">
+              <div className={`aspect-video mb-4 ${isPlaying ? 'block' : 'hidden'}`}>
                   <YouTube
                       videoId={videoId}
-                      opts={{ height: '0', width: '0' }}
+                      opts={{ width: '100%', height: '100%' }}
                       onReady={onPlayerReady}
                       onStateChange={onPlayerStateChange}
+                      className="w-full h-full rounded-lg overflow-hidden"
                   />
               </div>
             )}
 
             <div className="flex flex-col items-center">
-                <button 
-                    onClick={togglePlayPause} 
-                    className="mb-4 text-primary hover:text-white transition-colors duration-300 transform hover:scale-105"
-                    aria-label="Escuchar ahora"
-                >
-                    {isPlaying ? <PauseCircle size={64} /> : <PlayCircle size={64} />}
-                </button>
+                {!isPlaying && (
+                  <button 
+                      onClick={togglePlayPause} 
+                      className="mb-4 text-primary hover:text-white transition-colors duration-300 transform hover:scale-105"
+                      aria-label="Escuchar ahora"
+                  >
+                      {isPlaying ? <PauseCircle size={64} /> : <PlayCircle size={64} />}
+                  </button>
+                )}
                 <div className="w-full max-w-md bg-white/10 rounded-full h-2.5">
                     <div className="bg-primary h-2.5 rounded-full" style={{ width: `${progress}%` }}></div>
                 </div>
