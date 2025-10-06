@@ -6,6 +6,7 @@ import { MemberFooter } from '@/components/members/Footer';
 import { mainFrequency, bonusFrequencies } from '@/app/audio-data';
 import { ParticleBackground } from '@/components/landing/ParticleBackground';
 import { ProgressTracker } from '@/components/members/ProgressTracker';
+import { IrisChat } from '@/components/members/IrisChat';
 
 export default function MembersPage() {
   const allFrequencies = [mainFrequency, ...bonusFrequencies];
@@ -46,6 +47,7 @@ export default function MembersPage() {
         <LockedSection />
       </main>
       <MemberFooter />
+      <IrisChat />
     </div>
   );
 }
