@@ -34,7 +34,9 @@ export default function RootLayout({
       <body className="font-body antialiased bg-background">
         {children}
         <Toaster />
-        <script dangerouslySetInnerHTML={{ __html: scrollScript }} />
+        <Script id="scroll-fix" strategy="afterInteractive">
+          {scrollScript}
+        </Script>
       </body>
     </html>
   );
