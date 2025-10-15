@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Toaster } from "@/components/ui/toaster";
 import './globals.css';
-import Script from 'next/script';
+import { ScrollToTop } from '@/components/ScrollToTop';
+
 
 export const metadata: Metadata = {
   title: 'Frequencia del Reencuentro',
@@ -13,16 +14,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const scrollScript = `
-    window.onload = function () {
-      if (window.location.hash) {
-        history.replaceState(null, null, ' ');
-      }
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }, 0);
-    };
-  `;
 
   return (
     <html lang="es" className="dark">
@@ -34,9 +25,7 @@ export default function RootLayout({
       <body className="font-body antialiased bg-background">
         {children}
         <Toaster />
-        <Script id="scroll-fix" strategy="afterInteractive">
-          {scrollScript}
-        </Script>
+        <ScrollToTop />
       </body>
     </html>
   );
