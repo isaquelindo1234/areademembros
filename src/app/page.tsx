@@ -29,6 +29,12 @@ export default function MembersPage() {
             />
         </section>
 
+        {/* Iris Chat */}
+        <section id="iris-chat" className="my-10 md:my-16">
+            <IrisChat />
+        </section>
+
+
         {/* Bonus Frequencies */}
         <section className="my-10 md:my-16">
             <h2 className="text-2xl font-headline font-bold text-white text-center mb-8">Tus Frecuencias Adicionales</h2>
@@ -47,7 +53,6 @@ export default function MembersPage() {
         <LockedSection />
       </main>
       <MemberFooter />
-      <IrisChat />
     </div>
   );
 }
