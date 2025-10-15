@@ -6,9 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
-import { sendIrisMessage } from '@/app/iris-actions';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-
 
 type Message = {
   role: 'user' | 'model';
@@ -42,7 +40,19 @@ export function IrisChat() {
 
     try {
         const history = messages;
-        const result = await sendIrisMessage({ history, message: input });
+        const response = await fetch('/api/iris-chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ history, message: input }),
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const result = await response.json();
 
         if (result.response) {
             const modelMessage: Message = { role: 'model', content: result.response };
