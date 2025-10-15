@@ -29,10 +29,10 @@ export default function MembersPage() {
             />
         </section>
 
-        {/* Iris Chat */}
-        <section id="iris-chat" className="my-10 md:my-16">
+        {/* Iris Chat Section - Temporarily disabled for static export */}
+        {/* <section id="iris-chat" className="my-10 md:my-16">
             <IrisChat />
-        </section>
+        </section> */}
 
 
         {/* Bonus Frequencies */}
